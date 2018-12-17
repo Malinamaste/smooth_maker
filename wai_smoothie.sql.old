@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Lun 17 Décembre 2018 à 13:35
+-- Généré le :  Lun 17 Décembre 2018 à 12:12
 -- Version du serveur :  5.7.24-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.32-0ubuntu0.16.04.1
 
@@ -30,16 +30,6 @@ CREATE TABLE `Category` (
   `id` int(5) NOT NULL,
   `name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `Category`
---
-
-INSERT INTO `Category` (`id`, `name`) VALUES
-(1, 'Fruits'),
-(2, 'Légumes'),
-(3, 'Aromates'),
-(4, 'Produits laitiers');
 
 -- --------------------------------------------------------
 
@@ -79,29 +69,6 @@ CREATE TABLE `Product` (
   `idCategory` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Contenu de la table `Product`
---
-
-INSERT INTO `Product` (`id`, `name`, `buyPrice`, `image`, `idCategory`) VALUES
-(1, 'banane', 0.2, 'banane.jpg', 1),
-(2, 'kiwi', 0.37, 'kiwi.jpg', 1),
-(3, 'fruit de la passion', 0.79, 'passion.jpg', 1),
-(4, 'ananas', 2.19, 'ananas.jpg', 1),
-(5, 'grenade', 1.76, 'grenade.jpg', 1),
-(6, 'kaki', 0.65, 'kaki.jpg', 1),
-(7, 'noix de coco', 1.58, 'noixDeCoco.jpg', 1),
-(8, 'fraise', 0.1, 'fraise.jpg', 1),
-(9, 'framboise', 0.05, 'framboise.jpg', 1),
-(10, 'pomme verte', 0.6, 'pommeVerte.jpg', 1),
-(11, 'pomme rouge', 0.65, 'pommeRouge.jpg', 1),
-(12, 'pomme jaune', 0.45, 'pommeJaune', 1),
-(13, 'gingembre', 1, 'gingembre.jpg', 3),
-(14, 'poire', 0.56, 'poire.jpg', 1),
-(15, 'menthe', 0.64, 'menthe.jpg', 3),
-(16, 'basilic', 0.4, 'basilic.jpg', 3),
-(17, 'lait de coco', 0.25, 'laitCoco', 4);
-
 -- --------------------------------------------------------
 
 --
@@ -124,33 +91,9 @@ CREATE TABLE `Reciepe` (
 --
 
 CREATE TABLE `ReciepeProduct` (
-  `id` int(5) NOT NULL,
   `idReciepe` int(11) NOT NULL,
-  `idProduct` int(11) NOT NULL,
-  `quantityProduct` float NOT NULL,
-  `idUnit` varchar(30) NOT NULL
+  `idProduct` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `Unit`
---
-
-CREATE TABLE `Unit` (
-  `id` int(5) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `shortcut` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `Unit`
---
-
-INSERT INTO `Unit` (`id`, `name`, `shortcut`) VALUES
-(1, 'gramme', 'g'),
-(2, 'litre', 'L'),
-(4, 'pièce', NULL);
 
 -- --------------------------------------------------------
 
@@ -209,16 +152,8 @@ ALTER TABLE `Reciepe`
 -- Index pour la table `ReciepeProduct`
 --
 ALTER TABLE `ReciepeProduct`
-  ADD PRIMARY KEY (`id`),
   ADD KEY `idReciepe` (`idReciepe`),
-  ADD KEY `idProduct` (`idProduct`),
-  ADD KEY `idUnit` (`idUnit`);
-
---
--- Index pour la table `Unit`
---
-ALTER TABLE `Unit`
-  ADD PRIMARY KEY (`id`);
+  ADD KEY `idProduct` (`idProduct`);
 
 --
 -- Index pour la table `User`
@@ -235,7 +170,7 @@ ALTER TABLE `User`
 -- AUTO_INCREMENT pour la table `Category`
 --
 ALTER TABLE `Category`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `Comments`
 --
@@ -245,22 +180,12 @@ ALTER TABLE `Comments`
 -- AUTO_INCREMENT pour la table `Product`
 --
 ALTER TABLE `Product`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `Reciepe`
 --
 ALTER TABLE `Reciepe`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `ReciepeProduct`
---
-ALTER TABLE `ReciepeProduct`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `Unit`
---
-ALTER TABLE `Unit`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `User`
 --
