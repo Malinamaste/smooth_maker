@@ -1,9 +1,11 @@
+/* GENERAL */
 img {max-width: 100%;}
 footer {
 	color: #fff;
     background: #000;
     padding: 4em 0;
 }
+/* HEADER */
 #header {
 	display: flex;
     flex-flow: row wrap;
@@ -24,6 +26,7 @@ footer {
 #main-nav a {
 	padding: 0.5em;
 }
+/* MAIN */
 #presentation {
 	background: url("../images/passion.jpg") no-repeat #000 center;
 	background-size: cover;
@@ -45,9 +48,7 @@ footer {
 }
 #best-products {
 	display: flex;
-    /* flex-direction: row; */
-    /* text-align: center; */
-    flex-wrap: wrap;
+	flex-wrap: wrap;
     padding: 10em 0;
 }
 #best-products article {
@@ -67,6 +68,7 @@ footer {
   display: inline-block;
   line-height: 1em;
 }
+/* FOOTER */
 #footer {
 	display: flex;
 }
