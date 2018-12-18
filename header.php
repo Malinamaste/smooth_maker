@@ -12,6 +12,9 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet"> -->
 		<!-- Reset -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
 		<!-- CSS Perso -->
@@ -21,7 +24,8 @@
 	<body>
 		<!-- HEADER -->
 		<header id="header">
-			<a href="index.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
+			<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
+			<div id="wrapper">
 			<nav id="social">
 				<ul>
 					<li>
@@ -48,6 +52,10 @@
 					</li>
 				</ul>
 			</nav>
+<<<<<<< HEAD
+			</div>
+=======
+>>>>>>> 8aa73a033e265ece9a6dfe6c5ae64afd8976bbbc
 		</header>
 		<main>
 		
