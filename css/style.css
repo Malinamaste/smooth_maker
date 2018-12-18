@@ -24,14 +24,17 @@ html {
 #header a:hover {
 	color:#f9a825;
 }
+#social li:hover {
+	border: 1px solid #32c147;
+    border-radius: 100%;
+    padding: 10px;
+}
 #header img {
 	height: 10em;
 }
 
 #main-nav, #social {
-	display: flex;
-	flex-direction: column;
-	align-self: center;
+	align-self: flex-end;
 }
 #main-nav ul, #social ul {
 	display: flex;
@@ -39,16 +42,49 @@ html {
 #main-nav a, #social a {
 	padding: 0.5em;
 }
+#social ul li {
+	border: 1px solid #f9a825;
+    border-radius: 100%;
+    padding: 10px;
+}
+#social ul li:nth-child(2) {
+	margin:0 1em;
+}
+#wrapper {
+	display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+}
 /* MAIN */
 #main-background {
 	background: url("../images/background.png") no-repeat center;
 	background-size: cover;
 }
 /* FOOTER */
+
 #footer {
 	display: flex;
-	border-top: #f9a825 4px solid;
+	flex-wrap: wrap;
 	padding: 2em;
+	border-top: #f9a825 4px solid;
+}
+#first-section {
+	display: flex;
+}
+#logo {
+	flex:1;
+}
+#infos {
+	text-align: center;
+	flex-basis: 100%;
+	font-size: 0.7em;
+}
+#logo a {
+	color: #32c147;
+	font-weight: bold;
+}
+.container img {
+	width: 45%;
 }
 #footer h5 {
 	font-size: 0.85em;
@@ -56,13 +92,16 @@ html {
     border-bottom: 1px solid;
     padding-bottom: 0.8em;
 }
-#map, #contact, #newsletter {
-	flex: 1;
+#search, #contact {
+	margin-left:4em;
+	flex:1;
 }
-#contact {
-	margin: 0 1.5em;
+#search ul {
+	margin-top: 2em;
 }
-#contact ul, #newsletter p {
-
-    margin-top: 2em;
+#contact ul {
+	margin-top: 2em;
+}
+#contact a {
+	color: #000;
 }

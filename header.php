@@ -21,7 +21,8 @@
 	<body>
 		<!-- HEADER -->
 		<header id="header">
-			<a href="index.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
+			<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
+			<div id="wrapper">
 			<nav id="social">
 				<ul>
 					<li>
@@ -48,7 +49,7 @@
 					</li>
 				</ul>
 			</nav>
-
+			</div>
 		</header>
 		<!-- MAIN CONTENT -->
 		<main>
