@@ -66,11 +66,30 @@ html {
 }
 
 .recipes {
-	
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 auto;
 	justify-content: center;
+}
+
+/* Page Recipe */
+
+#ingredient img {
+	width: 50px;
+}
+
+#recipeArticle {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;	
+}
+
+#recipeArticle h2 {
+	flex-basis: 100%;
+}
+
+#recipeArticle li {
+	padding: 5px;
 }
 
 
