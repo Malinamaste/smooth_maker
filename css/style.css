@@ -29,7 +29,6 @@ footer {
 #header img {
 	height: 10em;
 }
-
 #main-nav, #social {
 	align-self: flex-end;
 }
@@ -70,13 +69,13 @@ footer {
 	}
 	#slider ol li:nth-child(2) {margin: 0 1em;}
 	/* BEST-SELLERS */
-	#best-sellers, #recipes {
+	#best-sellers, #recipes, #findus {
 		background-color: #fff;
     	text-align: center;
     	padding: 2em 1em;
     	margin-top: 1.5em;
 	}
-	#best-sellers h2, #recipes h2 {
+	#best-sellers h2, #recipes h2, #findus h2 {
 		color: #9E171F;
     	font-size: 1.8em;
     	border-bottom: 2px solid #49b46a;
@@ -101,14 +100,14 @@ footer {
 	}
 	#best-sellers .fa-plus-circle {padding-left: 0.7em;}
 	/* RECIPES */
-	#recipes a {display: flex;}
+	#recipes a, #findus a {display: flex;}
 	#recipes h3 {
 		color: #9E171F;
 		font-size: 1.7em;
 		padding: 0.8em 0.8em;
 		font-family: 'Pacifico', cursive;
 	}
-	#recipes a p:hover{
+	#recipes a p:hover, #findus a p:hover{
 		color: #ababab;
 	}
 	#recipes .fa-plus-circle {
@@ -126,8 +125,24 @@ footer {
     	text-align: left;
     	justify-content: flex-start;
 	}
+	/* FIND US */
+	#findus h3 {
+		color: #9E171F;
+    	font-size: 1.7em;
+    	font-family: 'Pacifico', cursive;
+    	margin-top: 3em;
+    	text-align: left;
+		padding-left: 3em;
+	}
+	#findus a {flex-wrap: wrap;}
+	#findus .fa-plus-circle {
+		position: relative;
+		left: -3em;
+		top: -1em;
+		color: #49b46a;
+		font-size: 3em;
+	}
 /* FOOTER */
-
 #footer {
 	display: flex;
 	flex-wrap: wrap;

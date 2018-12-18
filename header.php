@@ -52,10 +52,7 @@
 					</li>
 				</ul>
 			</nav>
-<<<<<<< HEAD
 			</div>
-=======
->>>>>>> 8aa73a033e265ece9a6dfe6c5ae64afd8976bbbc
 		</header>
 		<main>
 		
