@@ -1,74 +1,65 @@
-img {max-width: 100%;}
+/* GENERAL */
+img {
+	max-width: 100%;
+}
 footer {
-	color: #fff;
-    background: #000;
+	color: #000;
     padding: 4em 0;
 }
+html {
+	font-family: 'Open Sans', sans-serif;
+}
+/* HEADER */
 #header {
 	display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    background: seagreen;
-    padding: 2em;
+	padding: 2em;
+	border-bottom: #f9a825 4px solid;
+}
+#header a {
+	color: #32c147;
+	font-weight: bold;
+}
+#header a:hover {
+	color:#f9a825;
 }
 #header img {
 	height: 10em;
 }
-#main-nav {
+
+#main-nav, #social {
 	display: flex;
+	flex-direction: column;
 	align-self: center;
 }
-#main-nav ul {
+#main-nav ul, #social ul {
 	display: flex;
 }
-#main-nav a {
+#main-nav a, #social a {
 	padding: 0.5em;
 }
-#presentation {
-	background: url("../images/passion.jpg") no-repeat #000 center;
+/* MAIN */
+#main-background {
+	background: url("../images/background.png") no-repeat center;
 	background-size: cover;
-	height: 60vh;
-	color: #fff;
-	text-align: center;
+	padding: 3em 2em;
 }
-#presentation article {
-	padding: 2em 0;
+#slider ol {
+	margin-bottom: 1em;
 }
-#presentation h1 {
-	font-size: 4em;
-	margin: 1.5em 0;
+#slider li {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #721F72;
 }
-#presentation a {
-	border: 1px solid #fff;
-	padding: 0.8em;
-	color: #fff;
-}
-#best-products {
-	display: flex;
-    /* flex-direction: row; */
-    /* text-align: center; */
-    flex-wrap: wrap;
-    padding: 10em 0;
-}
-#best-products article {
-	flex: 1;
-}
-.ml16 {
-  color: #402d2d;
-  padding: 40px 0;
-  font-weight: 800;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  overflow: hidden;
-}
-
-.ml16 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
+#slider ol li:nth-child(2) {margin: 0 1em;}
+/* FOOTER */
 #footer {
 	display: flex;
+	border-top: #f9a825 4px solid;
+	padding: 2em;
 }
 #footer h5 {
 	font-size: 0.85em;
