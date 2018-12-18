@@ -1,7 +1,6 @@
 
 	</main>
 <!-- FOOTER -->
-<<<<<<< HEAD
 <!-- Flat Icon -->
 <link rel="icon" type="image/png" href="images/fruit-juice.png" />
 		<!-- Bootstrap -->
@@ -10,34 +9,37 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 		<!-- Reset -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
 		<!-- CSS Perso -->
 		<link rel="stylesheet" type="text/css" href="css/base.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 <footer>
-=======
-		<footer>
->>>>>>> 8aa73a033e265ece9a6dfe6c5ae64afd8976bbbc
 			<div id="footer" class="container">
 				<div id="logo">
 				<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
-			</div>
+				</div>
 				<div id="first-section">
 					<section id="search">
-						<h5>Recherche</h5>
+						<p>Recherche</p>
 							<ul><input type="text" class="search" placeholder="Vos saveurs..." required></ul>
 					</section>
 					<section id="contact">
-						<h5>Contact</h5>
+						<p>Contact</p>
 						<ul>
 							<li>34 rue des fruits</li>
 							<li>69002 Lyon</li>
 							<li>Telephone: +33 4 25 45 89 47</li>
 							<li>E-mail: <a href="#">info@wai-smoothies.com</a></li>
-							<li>Ouvert du lundi au samedi de 8h à 17h</li>
+							<li>Ouvert du lundi au samedi de 8h à 19h (hors jours fériés)</li>
 						</ul>
 					</section>
+				</div>
+				<div id="news">
+					<h5>Inscrivez-vous à notre newsletters</h5>
+					<ul><input type="email" id="email" pattern=".+@globex.com" size="30" placeholder="Votre mail" required></ul>
 				</div>
 				<div id="infos">
 					<a href="#">Mentions légales</a>-<a href="#"> Contact</a>.
