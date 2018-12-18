@@ -14,7 +14,7 @@ if(array_key_exists("email", $_POST)) {
         $userModel = new UserModel();
         $user = $userModel->getUser($email, $password);
 
-        $userSession = new User();
+        $userSession = new User();  
         $userSession->create($user["id"], $user["firstName"] , $user["lastName"], $user["email"]);
         
         header("Location: main.php");

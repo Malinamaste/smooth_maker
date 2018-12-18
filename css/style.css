@@ -17,6 +17,7 @@ footer {
 #header a {
 	color: #32c147;
 	font-weight: bold;
+	font-size: 2rem;
 }
 #header a:hover {
 	color:#f9a825;
@@ -29,6 +30,18 @@ footer {
 #header img {
 	height: 10em;
 }
+#connexion {
+	display: flex;
+    flex-basis: 100%;
+	justify-content: flex-end;
+	border-bottom: 2px solid gray;
+	margin-bottom: 1rem;
+}
+#connexion a {
+	color: gray;
+
+}
+
 #main-nav, #social {
 	align-self: flex-end;
 }
@@ -149,14 +162,43 @@ footer {
 	padding: 2em;
 	border-top: #f9a825 4px solid;
 }
-#first-section {
+
+/* Page Recipe */
+
+#ingredient img {
+	width: 50px;
+}
+
+#recipeArticle {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;	
+	background: white;
+}
+
+.recipePage h2 {
+	flex-basis: 100%;
+	background: white;
+}
+
+#recipeArticle li {
+	padding: 5px;
+}
+
+#commName p span {
+	font-style: italic;
+}
+
+
+/* FOOTER */
+#footer {
 	display: flex;
 }
 #logo {
 	flex:1;
 }
 #infos {
-	text-align: center;
+	padding-top: 2rem;
 	flex-basis: 100%;
 	font-size: 0.7em;
 }
@@ -170,11 +212,8 @@ footer {
 #footer h5 {
 	font-size: 0.85em;
     text-transform: uppercase;
-    border-bottom: 1px solid;
-    padding-bottom: 0.8em;
 }
-#search, #contact {
-	margin-left:4em;
+#search, #contact, #news {
 	flex:1;
 }
 #search ul {
@@ -185,6 +224,11 @@ footer {
 }
 #contact a {
 	color: #000;
+}
+#news {
+	text-align: center;
+	padding-right: 9rem;
+	margin-bottom: 2rem;
 }
 
 
