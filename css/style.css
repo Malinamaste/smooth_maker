@@ -5,12 +5,14 @@ footer {
     background: #000;
     padding: 4em 0;
 }
+html {
+	font-family: 'Open Sans', sans-serif;
+}
 /* HEADER */
 #header {
 	display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    background: seagreen;
     padding: 2em;
 }
 #header img {

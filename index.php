@@ -9,6 +9,7 @@
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<!-- Reset -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
 		<!-- CSS Perso -->
@@ -18,23 +19,17 @@
 	<body>
 		<!-- HEADER -->
 		<header id="header">
-			<a href="index.php"><img src="images/fresh.jpg" alt="Logo de Wai Smoothies"></a>
+			<a href="index.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
 			<nav id="main-nav">
 				<ul>
 					<li>
-						<a href="#">Le concept</a>
+						<a href="#">Notre concept</a>
 					</li>
 					<li>
-						<a href="#">Les recettes</a>
+						<a href="#">Nos recettes</a>
 					</li>
 					<li>
-						<a href="#">Notre histoire</a>
-					</li>
-					<li>
-						<a href="#">Nous contacter</a>
-					</li>
-					<li>
-						<a href="#">Connexion</a>
+						<a href="#">Contact</a>
 					</li>
 				</ul>
 			</nav>
