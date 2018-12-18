@@ -30,7 +30,18 @@ footer {
 #main-background {
 	background: url("../images/background.png") no-repeat center;
 	background-size: cover;
+	padding: 3em 2em;
 }
+#slider ol {
+	margin-bottom: 1em;
+}
+#slider li {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #721F72;
+}
+#slider ol li:nth-child(2) {margin: 0 1em;}
 /* FOOTER */
 #footer {
 	display: flex;
