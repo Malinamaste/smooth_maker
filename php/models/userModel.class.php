@@ -10,10 +10,10 @@ class UserModel {
         $zip
     ) {        
 
-        include "bdd.php";
+        include "php/bdd.php";
 
         $req = $bdd->prepare("
-        SELECT *
+        SELECT id
         FROM User
         WHERE email = ?
         ");
@@ -21,8 +21,8 @@ class UserModel {
         $req->execute([$email]);
         $emailExist = $req->fetch();
 
-        if(!empty($emailExist)) {
-            throw new DomainException("L'utilisateur existe déjà");
+        if(!empty($emailExist["id"])) {
+            throw new DomainException("L'adresse mail existe déjà");
         }
 
         $req = $bdd->prepare("INSERT INTO User
@@ -37,6 +37,7 @@ class UserModel {
 
         $hashPassword = $this->hashPassword($password);
 
+        
         // Insertion de l'utilisateur dans la base de données.
         $req->execute(array($lastName, $firstName,$email,$hashPassword,$zip));
     }
@@ -46,5 +47,24 @@ class UserModel {
         $salt = '$2y$11$' . substr(bin2hex(openssl_random_pseudo_bytes(32)), 0, 22);
         return crypt($password, $salt);
     }
- 
+
+    public function getUser($email, $password) {
+
+        include "php/bdd.php";
+
+        $req = $bdd->prepare("
+        SELECT *
+        FROM User
+        WHERE email = ? AND password = ?
+        ");
+
+        $req->execute(array($email, $password));
+        $user = $req->fetch();
+
+        if(empty($user["id"])) {
+            throw new DomainException("Votre adresse mail ou votre mot de passe sont erronés");
+        }
+
+        return $user;
+    }
 }
