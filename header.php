@@ -48,10 +48,6 @@
 					</li>
 				</ul>
 			</nav>
-
 		</header>
-		<!-- MAIN CONTENT -->
 		<main>
-			<?php include $page.'.php' ?>
-		</main>
 		

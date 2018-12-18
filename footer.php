@@ -1,5 +1,7 @@
+
+	</main>
 <!-- FOOTER -->
-<footer>
+		<footer>
 			<div id="footer" class="container">
 			<a href="index.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
 				<section id="map">
