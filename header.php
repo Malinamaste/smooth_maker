@@ -12,7 +12,9 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet"> -->
 		<!-- Reset -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
 		<!-- CSS Perso -->
@@ -49,10 +51,6 @@
 					</li>
 				</ul>
 			</nav>
-
 		</header>
-		<!-- MAIN CONTENT -->
 		<main>
-			<?php include $page.'.php' ?>
-		</main>
 		
