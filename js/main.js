@@ -1,4 +1,7 @@
-// Wrap every letter in a span
+
+$(document).ready(function(){
+
+  // Wrap every letter in a span
 $('.ml16').each(function(){
   $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
 });
@@ -19,3 +22,10 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
+
+
+  $(".form-infos").on("submit", function(e) {
+      e.preventDefault();
+  });
+  
+});

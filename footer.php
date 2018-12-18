@@ -1,4 +1,7 @@
+
+	</main>
 <!-- FOOTER -->
+<<<<<<< HEAD
 <!-- Flat Icon -->
 <link rel="icon" type="image/png" href="images/fruit-juice.png" />
 		<!-- Bootstrap -->
@@ -13,6 +16,9 @@
 		<link rel="stylesheet" type="text/css" href="css/base.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 <footer>
+=======
+		<footer>
+>>>>>>> 8aa73a033e265ece9a6dfe6c5ae64afd8976bbbc
 			<div id="footer" class="container">
 				<div id="logo">
 				<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
