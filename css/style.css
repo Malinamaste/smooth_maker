@@ -140,13 +140,45 @@ footer {
 	}
 /* FOOTER */
 
+<<<<<<< HEAD
+.recipes {
+=======
 #footer {
+>>>>>>> 4dd9342fb04c9d479c1fd0ce23706e3c2c30aa6d
 	display: flex;
 	flex-wrap: wrap;
 	padding: 2em;
 	border-top: #f9a825 4px solid;
 }
+<<<<<<< HEAD
+
+/* Page Recipe */
+
+#ingredient img {
+	width: 50px;
+}
+
+#recipeArticle {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;	
+}
+
+#recipeArticle h2 {
+	flex-basis: 100%;
+}
+
+#recipeArticle li {
+	padding: 5px;
+}
+
+
+
+/* FOOTER */
+#footer {
+=======
 #first-section {
+>>>>>>> 4dd9342fb04c9d479c1fd0ce23706e3c2c30aa6d
 	display: flex;
 }
 #logo {
