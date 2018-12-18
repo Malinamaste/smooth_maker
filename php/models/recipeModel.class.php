@@ -14,6 +14,6 @@ class RecipeModel {
         $req->execute();
         $recipes = $req->fetchAll();
 
-        return ["recipes" => $recipes];
+        return $recipes;
     }
 }

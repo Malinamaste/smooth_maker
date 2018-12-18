@@ -55,6 +55,26 @@ html {
 	background-color: #721F72;
 }
 #slider ol li:nth-child(2) {margin: 0 1em;}
+
+
+/* Page Recipes */
+
+#recipesCard {
+	background: white;
+	margin: 10px 10px;
+	width: 48%;
+}
+
+.recipes {
+	
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+
+
 /* FOOTER */
 #footer {
 	display: flex;
@@ -76,4 +96,21 @@ html {
 #contact ul, #newsletter p {
 
     margin-top: 2em;
+}
+
+
+/*
+	RESPONSIVE
+*/
+
+@media screen and (max-width: 1080px) {
+
+	/* Page Recipes */
+
+	#recipesCard {
+		background: white;
+		margin: 10px 10px;
+		width: 100%;
+	}
+
 }
