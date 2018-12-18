@@ -43,18 +43,51 @@ html {
 #main-background {
 	background: url("../images/background.png") no-repeat center;
 	background-size: cover;
-	padding: 3em 2em;
+	padding: 2em;
 }
-#slider ol {
-	margin-bottom: 1em;
-}
-#slider li {
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	background-color: #721F72;
-}
-#slider ol li:nth-child(2) {margin: 0 1em;}
+	/* SLIDER */
+	#slider ol {
+		margin-bottom: 1em;
+	}
+	#slider li {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background-color: #9E171F;
+	}
+	#slider ol li:nth-child(2) {margin: 0 1em;}
+	/* BEST-SELLERS */
+	#best-sellers {
+		background-color: #fff;
+    	text-align: center;
+    	padding: 2em 1em;
+    	margin-top: 1.5em;
+	}
+	#best-sellers h2 {
+		color: #9E171F;
+    	font-size: 1.5em;
+    	border-bottom: 2px solid #49b46a;
+    	padding-bottom: 1.2em;
+    	width: 80%;
+    	margin: 0 auto;
+	}
+	#best-sellers ul {
+		display: flex;
+		margin-top: 6em;
+	}
+	#best-sellers h3 {
+		color: #9E171F;
+		font-size: 1.7em;
+		margin-bottom: 0.8em;
+		font-family: 'Homemade Apple', cursive;
+		font-weight: bold;
+	}
+	#best-sellers a {
+		font-family: 'Homemade Apple', cursive;
+		color: #49b46a;
+		font-weight: bold;
+	}
+	#best-sellers .fa-plus-circle {padding-left: 0.7em;}
 /* FOOTER */
 #footer {
 	display: flex;
