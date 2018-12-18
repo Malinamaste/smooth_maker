@@ -126,19 +126,14 @@ footer {
     	text-align: left;
     	justify-content: flex-start;
 	}
-/* FOOTER */
 
-<<<<<<< HEAD
+	/* Page Recipes */
 .recipes {
-=======
-#footer {
->>>>>>> 4dd9342fb04c9d479c1fd0ce23706e3c2c30aa6d
 	display: flex;
 	flex-wrap: wrap;
 	padding: 2em;
 	border-top: #f9a825 4px solid;
 }
-<<<<<<< HEAD
 
 /* Page Recipe */
 
@@ -150,23 +145,25 @@ footer {
 	display: flex;
 	align-items: center;
 	margin-bottom: 30px;	
+	background: white;
 }
 
-#recipeArticle h2 {
+.recipePage h2 {
 	flex-basis: 100%;
+	background: white;
 }
 
 #recipeArticle li {
 	padding: 5px;
 }
 
+#commName p span {
+	font-style: italic;
+}
 
 
 /* FOOTER */
 #footer {
-=======
-#first-section {
->>>>>>> 4dd9342fb04c9d479c1fd0ce23706e3c2c30aa6d
 	display: flex;
 }
 #logo {

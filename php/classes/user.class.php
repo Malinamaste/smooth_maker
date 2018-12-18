@@ -6,7 +6,7 @@ class User {
 
     public function __construct() {
         if(session_status() == PHP_SESSION_NONE) {
-            session_start(); 
+            session_start();
         }
     }
 
@@ -32,5 +32,13 @@ class User {
         $_SESSION["user"] = [];
         session_destroy();
     }
+
+    public function getUserId(){
+    	return $_SESSION['user']['UserId'];
+    }
+
+    public function getFullName() {
+        return $_SESSION["user"]["FirstName"] . " " .  $_SESSION["user"]["LastName"];
+     }
 
 }

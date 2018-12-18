@@ -1,5 +1,6 @@
 <?php
 
+include_once "php/classes/user.class.php";
 include_once "php/models/recipeModel.class.php";
 include_once "php/models/commentModel.class.php";
 include_once "header.php";
@@ -17,9 +18,23 @@ $ingredients = $recipeModel->getIngredients($idRecipe);
 $commentModel = new CommentModel();
 $comments = $commentModel->getComments($idRecipe);
 
+if(array_key_exists("commentaire", $_POST)) {
+
+    if($userSession->isAuthenticated() == false){
+        header("Location: connexion.php");
+        exit();
+    }
+
+    $userSession = new User();  
+    $userId = $userSession->getUserId();
+    
+
+    $userSession = new User();  
+}
+
 ?>
 
-<section id="main-background">
+<section id="main-background" class="recipePage">
 
     <h2><?php echo $recipe["name"] ?></h2>
     <article id="recipeArticle">
@@ -38,27 +53,23 @@ $comments = $commentModel->getComments($idRecipe);
         <?php 
             foreach($comments as $comment): 
                 if(count($comment["idComments"]) > 0): ?>
-                    <p id="commName"><i class="fas fa-comments"></i> Rédigé par <span><?php echo $commentaire["pseudo"] ?></span> </p>
+                    <p id="commName"><i class="fas fa-comments"></i> Rédigé par <span><?php echo $comment["firstName"] ." " . $comment["lastName"]  ?></span></em>
                     <p id="commentaire"> <?php echo $comment["comment"] ?> </p>
                 <?php else : ?> 
-                    <p><i class="fas fa-comments"></i> <em>Soyez le premier à réagir à cet article</em></p>
+                    <p><i class="fas fa-comments"></i> <em>Soyez le premier à réagir</em></p>
         <?php endif; endforeach;  ?>
     </article>
-    <form method="POST" action="comment.php">
+    <form method="POST">
         <fieldset>
             <legend><i class="far fa-comment"></i> Nouveau commentaire</legend>
             <ul>
                 <li>
-                    <label for="pseudo">Pseudo: </label>
-                    <input type="text" name="pseudo" id="pseudo" size="50">
-                </li>
-                <li>
-                    <label for="commentaire">Commentaire: </label>
+                    <label for="commentaire"> </label>
                     <textarea rows="4" cols="57" name="commentaire" id="commentaire" ></textarea>
                 </li>
                 <li id="buttons">
-                    <button type="submit" name="addComments" id="btnOk" title="Ajouter un commentaire">Ajouter</button>
-                    <button type="reset" name="cancelComments" id="btnCancel" title="Annuler le commentaire">Annuler</button>
+                    <button type="submit" id="btnOk" title="Ajouter un commentaire">Ajouter</button>
+                    <button type="reset" id="btnCancel" title="Annuler le commentaire">Annuler</button>
                 </li>
             </ul>
         </fieldset>
