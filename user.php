@@ -1,3 +1,34 @@
+<?php 
+
+include "php/classes/user.class.php";
+
+if(array_key_exists("email", $_POST)) {
+
+    $errorMessage = "";
+
+    try
+    {
+        $email = $_POST["email"];
+        $firstName = $_POST["firstname"];
+        $lastName = $_POST["lastname"];
+        $zip = $_POST["zip"];
+        $password = $_POST["password"];
+
+        $userModel = new UserModel();
+        $userModel->create($firstName, $lastName, $email, $password, $zip);
+
+        header("Location: main.php");
+        exit();
+
+    }
+    catch(DomainException $exception) {
+
+        $errorMessage = $exception->getMessage();
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +43,16 @@
 </head>
 <body>
     <main>
-        <form action="php/connexion.php" method="POST" class="form-infos">
-            <h1>Remplir les champs ci dessous</h1>                
+        <form action="user.php" method="POST" class="form-infos">
+            <h1>Remplir les champs ci dessous</h1>   
+
+            <!-- Message d'alerte si l'adresse mail existe déjà -->   
+            <?php if(!empty($errorMessage)): ?>
+                <p class="alert alert-danger" role="alert" > 
+                    <?php echo $errorMessage; ?> 
+                </p>
+            <?php endif; ?>
+
                 <div class="form-row">
                     <div class="col-md-6 mb-2">
                         <label for="lastname"></label>
@@ -34,14 +73,13 @@
                     <div class="col-md-6 mb-2">
                         <label for="email"></label>
                             <input type="email" name="email" class="form-control" id="email" placeholder="Votre adresse email">
-                            <span class="invalid-feedback">Mauvaise adresse Email</span>
                     </div>
                     <div class="col-md-6 mb-2">
                         <label for="password"></label>
                             <input type="password" name="password" class="form-control" id="password" placeholder="Votre mot de passe">
                     </div>
                 </div>
-            <button id="save" class="btn btn-primary" type="submit">Enregistrer</button>
+                <button id="save" class="btn btn-primary">Enregistrer</button>
             </form>
         </main>
               

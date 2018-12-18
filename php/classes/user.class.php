@@ -1,12 +1,12 @@
 <?php
 
-include "models/userModel.class.php";
+include "php/models/userModel.class.php";
 
 class User {
 
     public function __construct() {
         if(session_status() == PHP_SESSION_NONE) {
-            session_start(); // démarrer les services de session
+            session_start(); 
         }
     }
 
@@ -18,9 +18,7 @@ class User {
             'Email'     => $email
         ];
     }
-
-
-    /*
+    
     public function isAuthenticated(){
     	if(array_key_exists("user", $_SESSION)) {
             if(!empty($_SESSION["user"])) {
@@ -34,6 +32,5 @@ class User {
         $_SESSION["user"] = [];
         session_destroy();
     }
-    */
 
 }
