@@ -1,15 +1,16 @@
 /* GENERAL */
-
 img {
 	max-width: 100%;
+}
+h2, h3 {
+	color: #9E171F;
+	font-family: 'Pacifico', cursive;
 }
 footer {
 	color: #000;
     padding: 4em 0;
 }
-
 /* HEADER */
-
 #header {
 	display: flex;
     flex-flow: row wrap;
@@ -68,15 +69,11 @@ footer {
     flex-direction: column;
     justify-content: inherit;
 }
-
 #nameUserConnect {
 	padding: 0 10px;
 	color: #4a4a4a;
 }
-
-
 /* MAIN */
-
 #main-background {
 	background: url("../images/background/background.png") no-repeat center;
 	background-size: cover;
@@ -95,13 +92,12 @@ footer {
 	#slider ol li:nth-child(2) {margin: 0 1em;}
 	/* BEST-SELLERS */
 	#best-sellers, #recipes, #findus {
-		background-color: #fff;
+		background-color: rgba(255,255,255, 0.8);
     	text-align: center;
     	padding: 2em 1em;
     	margin-top: 1.5em;
 	}
 	#best-sellers h2, #recipes h2, #findus h2 {
-		color: #9E171F;
     	font-size: 1.8em;
     	border-bottom: 2px solid #49b46a;
     	padding-bottom: 0.7em;
@@ -113,10 +109,8 @@ footer {
 		margin-top: 6em;
 	}
 	#best-sellers h3 {
-		color: #9E171F;
 		font-size: 1.7em;
 		margin-bottom: 0.8em;
-		font-family: 'Pacifico', cursive;
 	}
 	#best-sellers a {
 		font-family: 'Pacifico', cursive;
@@ -127,10 +121,8 @@ footer {
 	/* RECIPES */
 	#recipes a, #findus a {display: flex;}
 	#recipes h3 {
-		color: #9E171F;
 		font-size: 1.7em;
 		padding: 0.8em 0.8em;
-		font-family: 'Pacifico', cursive;
 	}
 	#recipes a p:hover, #findus a p:hover{
 		color: #ababab;
@@ -152,49 +144,115 @@ footer {
 	}
 	/* FIND US */
 	#findus h3 {
-		color: #9E171F;
     	font-size: 1.7em;
-    	font-family: 'Pacifico', cursive;
     	margin-top: 3em;
     	text-align: left;
-		padding-left: 3em;
+		padding-left: 5em;
 	}
-	#findus a {flex-wrap: wrap;}
+	#findus a {flex-wrap: nowrap;}
+	#findus p, .wrap {flex: 1;}
+	#findus p {
+		text-align: left;
+    	padding-top: 6em;
+	}
 	#findus .fa-plus-circle {
 		position: relative;
-		left: -3em;
-		top: -1em;
+		left: 6.6em;
+		top: -2.8em;
 		color: #49b46a;
 		font-size: 3em;
+	}	
+/* RECIPES PAGE */
+#all-recipes {
+	background-color: #fff;
+	padding: 5em 7em 0 7em;
+	display: flex;
+    flex-wrap: wrap;
+}
+	/* RECIPES CARD */
+	#recipesCard {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		flex-basis: 50%;
+		padding-bottom: 6em;
+	}
+	#recipesCard h2 {
+    	font-size: 1.7em;
+		padding-bottom: 1em;
+	}
+	#recipesCard p, #recipesCard .fa-plus-circle, #recipesCard .fa-star {color: #49b46a;}
+	#recipesCard p {
+		padding-top: 1em;
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	#recipesCard img {max-width: 50%;}
+	#recipesCard .fa-plus-circle {
+		font-size: 3em;
+		position: relative;
+		left: -0.5em;
+		top: 0.6em;
+	}
+	#recipesCard .fa-star {
+		padding-right: 0.3em;
+		padding-top: 0.8em;
+		font-size: 1.2em;
 	}
 
-/* Page Recipe */
-
+/* RECIPE PUSH */
 #ingredient img {
 	width: 50px;
 }
-
 #recipeArticle {
 	display: flex;
 	align-items: center;
 	margin-bottom: 30px;	
 	background: white;
 }
-
-.recipePage h2 {
+#recipeSection h2 {
 	flex-basis: 100%;
 	background: white;
 }
-
 #recipeArticle li {
 	padding: 5px;
 }
-
-#commName p span {
-	font-style: italic;
+#commName span, form legend {
+	font-weight: bold;
 }
-
-
+#commentaires {
+	background: rgba(255, 255, 255, 0.8);
+	padding: 2em;
+}
+#commentaires article {
+	padding: 10px 0;
+}
+#commentaires #btnOk {
+	background: #32c147;
+}
+#commentaires .fa-star {
+	color: #32c147;
+	font-size: 25px;
+}
+#commentaires .fa-comment-dots, #commentaires .fa-comments {
+	color: #32c147;
+	font-size: 20px;
+}
+#commentaires #btnCancel {
+	background: rgb(226, 60, 71);
+}
+#commentaires #btnCancel, #commentaires #btnOk  {
+	color: white;
+	padding: 5px 10px;
+	cursor: pointer;
+	border: 0;
+}
+#commentaires form li {
+	padding: 10px 0;
+}
+#commentaires #comm {
+	padding: 0 5px;
+}
 /* FOOTER */
 #footer {
 	display: flex;
@@ -202,7 +260,6 @@ footer {
 	padding: 2em;
 	border-top: #f9a825 4px solid;
 }
-
 #logo {
 	flex:1;
 }
@@ -245,6 +302,7 @@ footer {
 	margin-bottom: 2rem;
 }
 /* CONCEPT */
+/*
 h1 {
 	color: #9E171F;
     font-size: 1.8em;
@@ -264,6 +322,7 @@ section {
 section p {
 	margin: 2rem;
 }
+*/
 
 /*
 	RESPONSIVE
