@@ -38,7 +38,10 @@ class User {
     }
 
     public function getFullName() {
-        return $_SESSION["user"]["FirstName"] . " " .  $_SESSION["user"]["LastName"];
+
+        if($this->isAuthenticated()) {
+            return $_SESSION["user"]["FirstName"] . " " .  $_SESSION["user"]["LastName"];
+        }
      }
 
 }

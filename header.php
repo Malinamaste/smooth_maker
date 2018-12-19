@@ -4,7 +4,7 @@ include_once "php/classes/user.class.php";
 
 $userSession = new User();  
 $user = $userSession->getFullName();
-
+ 
 ?>
 
 <!DOCTYPE html>
@@ -34,9 +34,13 @@ $user = $userSession->getFullName();
 		<!-- HEADER -->
 		<header id="header">
 			<section id="connexion">
-				<p id="nameUserConnect">Bonjour <?php echo $user ?> ! </p>
+				
+				<?php if(!empty($user)): ?>
+					<p id="nameUserConnect">Bonjour <?php echo $user ?> ! </p>
+				<?php endif; ?>
+
 				<a href="connexion.php" title="Connectez-vous"><i class="fas fa-user"></i></a>	
-				<a href="logout.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
+				<a href="php/logout.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
 			</section>
 			<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
 			<div id="wrapper">
@@ -59,10 +63,10 @@ $user = $userSession->getFullName();
 						<a href="concept.php">Notre concept</a>
 					</li>
 					<li>
-						<a href="recipes">Nos recettes</a>
+						<a href="recipes.php">Nos recettes</a>
 					</li>
 					<li>
-						<a href="#">Contact</a>
+						<a href="cobntact.php">Contact</a>
 					</li>
 				</ul>
 			</nav>

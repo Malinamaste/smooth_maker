@@ -20,10 +20,10 @@ $comments = $commentModel->getComments($idRecipe);
 
 if(array_key_exists("commentaire", $_POST)) {
 
-    if($userSession->isAuthenticated() == false){
+    /*if($userSession->isAuthenticated() == false){
         header("Location: connexion.php");
         exit();
-    }
+    }*/
 
     $userSession = new User();  
     $userId = $userSession->getUserId();
