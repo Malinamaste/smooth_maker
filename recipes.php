@@ -8,6 +8,8 @@ include_once "header.php";
 $recipeModel = new RecipeModel();
 $recipes = $recipeModel->getAllRecipes();
 
+
+
 ?>
 
 <section id="main-background" class="recipes">

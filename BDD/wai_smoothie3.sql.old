@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mer 19 Décembre 2018 à 09:06
+-- Généré le :  Mar 18 Décembre 2018 à 15:11
 -- Version du serveur :  5.7.24-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.32-0ubuntu0.16.04.1
 
@@ -52,16 +52,9 @@ CREATE TABLE `Comments` (
   `id` int(5) NOT NULL,
   `comment` text NOT NULL,
   `idUser` int(11) NOT NULL,
-  `idRecipe` int(11) NOT NULL,
+  `idReciepe` int(11) NOT NULL,
   `rates` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `Comments`
---
-
-INSERT INTO `Comments` (`id`, `comment`, `idUser`, `idRecipe`, `rates`) VALUES
-(1, 'Super bonne recette', 1, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -71,7 +64,7 @@ INSERT INTO `Comments` (`id`, `comment`, `idUser`, `idRecipe`, `rates`) VALUES
 
 CREATE TABLE `Favorite` (
   `idUser` int(11) NOT NULL,
-  `idRecipe` int(11) NOT NULL
+  `idReciepe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -254,14 +247,14 @@ ALTER TABLE `Category`
 ALTER TABLE `Comments`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idUser` (`idUser`),
-  ADD KEY `idReciepe` (`idRecipe`);
+  ADD KEY `idReciepe` (`idReciepe`);
 
 --
 -- Index pour la table `Favorite`
 --
 ALTER TABLE `Favorite`
   ADD KEY `idUser` (`idUser`),
-  ADD KEY `idReciepe` (`idRecipe`);
+  ADD KEY `idReciepe` (`idReciepe`);
 
 --
 -- Index pour la table `Product`
@@ -312,7 +305,7 @@ ALTER TABLE `Category`
 -- AUTO_INCREMENT pour la table `Comments`
 --
 ALTER TABLE `Comments`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `Product`
 --
@@ -332,7 +325,7 @@ ALTER TABLE `RecipeProduct`
 -- AUTO_INCREMENT pour la table `Unit`
 --
 ALTER TABLE `Unit`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `User`
 --
@@ -346,14 +339,14 @@ ALTER TABLE `User`
 -- Contraintes pour la table `Comments`
 --
 ALTER TABLE `Comments`
-  ADD CONSTRAINT `fk_reciepe` FOREIGN KEY (`idRecipe`) REFERENCES `Recipe` (`id`),
+  ADD CONSTRAINT `fk_reciepe` FOREIGN KEY (`idReciepe`) REFERENCES `Recipe` (`id`),
   ADD CONSTRAINT `fk_user` FOREIGN KEY (`idUser`) REFERENCES `User` (`id`);
 
 --
 -- Contraintes pour la table `Favorite`
 --
 ALTER TABLE `Favorite`
-  ADD CONSTRAINT `fk_reciepeFavorite` FOREIGN KEY (`idRecipe`) REFERENCES `Recipe` (`id`),
+  ADD CONSTRAINT `fk_reciepeFavorite` FOREIGN KEY (`idReciepe`) REFERENCES `Recipe` (`id`),
   ADD CONSTRAINT `fk_userFavorite` FOREIGN KEY (`idUser`) REFERENCES `User` (`id`);
 
 --
