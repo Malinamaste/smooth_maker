@@ -199,8 +199,7 @@ footer {
 		padding-top: 0.8em;
 		font-size: 1.2em;
 	}
-
-/* RECIPE PUSH */
+/* RECIPE PAGE */
 #ingredient img {
 	width: 50px;
 }
@@ -245,7 +244,7 @@ footer {
 	color: white;
 	padding: 5px 10px;
 	cursor: pointer;
-	border: 0;
+	border: none;
 }
 #commentaires form li {
 	padding: 10px 0;
@@ -253,6 +252,55 @@ footer {
 #commentaires #comm {
 	padding: 0 5px;
 }
+/* USER PAGE */
+#new-user {
+	background: rgba(255, 255, 255, 0.8);
+	padding: 5em 7em;
+}
+	/* FORMULAIRE */
+	#new-user .fa-file-alt {
+		padding-right: 0.7em;
+	}
+	#new-user form {
+		margin-left: 3em;
+		width: 25%;
+	}
+	#new-user h1 {
+		color: #f9a825;
+		font-family: 'Pacifico', cursive;
+		font-size: 2em;
+	}
+	#new-user h2 {
+		color: #000;
+		text-transform: uppercase;
+		font-family: 'Josefin Sans', sans-serif;
+		padding-top: 1.5em;
+		padding-bottom: 1em;
+	}
+	#new-user input {
+		margin-bottom: 2em;
+		padding: 1.5em;
+		font-size: 1em;
+	}
+	#new-user ::placeholder {font-size: 1em;}
+	#new-user ul li:nth-child(4) {
+		margin-top: 6em;
+		margin-bottom: 2em;
+	}
+	#new-user button, #new-user a {
+		border: none;
+		font-size: 1em;
+	}
+	#new-user button {
+		background: #32c147;
+		margin-right: 1em;
+		padding: 0.5em;
+	}
+	#new-user a {
+		background: rgb(226, 60, 71);
+		color: #fff;
+		padding: 0.5em 1em;
+	}
 /* FOOTER */
 #footer {
 	display: flex;
