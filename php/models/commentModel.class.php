@@ -23,18 +23,13 @@ class CommentModel {
 
         include "php/bdd.php";
 
-        $req = $bdd->prepare("INSERT INTO User
+        $req = $bdd->prepare("INSERT INTO Comments
         (
-            lastName,
-            firstName,
-            email,
-            password,
-            zip
-        ) VALUES (?, ?, ?, ?, ?)");
+            comment,
+            idUser,
+            idRecipe
+        ) VALUES (?, ?, ?)");
 
-        $req->execute([$idRecipe]);
-        $comments = $req->fetchAll();
-
-        return $comments;
+        $req->execute([$idRecipe, $idUser]);
     }
 }

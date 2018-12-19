@@ -1,3 +1,19 @@
+<?php
+
+include_once "php/classes/user.class.php";
+
+$userSession = new User();  
+
+if($userSession->isAuthenticated() == false){
+	header("Location: connexion.php");
+	exit();
+}
+else {
+	$user = $userSession->getFullName();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -25,6 +41,7 @@
 		<!-- HEADER -->
 		<header id="header">
 			<section id="connexion">
+				<p id="nameUserConnect">Bonjour <?php echo $user ?> ! </p>
 				<a href="connexion.php" title="Connectez-vous"><i class="fas fa-user"></i></a>	
 				<a href="main.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
 			</section>
@@ -58,5 +75,5 @@
 			</nav>
 			</div>
 		</header>
-		<main>
+	<main>
 		
