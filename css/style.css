@@ -155,13 +155,6 @@ footer {
 		color: #49b46a;
 		font-size: 3em;
 	}
-/* FOOTER */
-#footer {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 2em;
-	border-top: #f9a825 4px solid;
-}
 
 /* Page Recipe */
 
@@ -193,6 +186,9 @@ footer {
 /* FOOTER */
 #footer {
 	display: flex;
+	flex-wrap: wrap;
+	padding: 2em;
+	border-top: #f9a825 4px solid;
 }
 #logo {
 	flex:1;
@@ -213,6 +209,10 @@ footer {
 	font-size: 0.85em;
     text-transform: uppercase;
 }
+#first-section {
+	display: flex;
+	flex-direction: row;
+}
 #search, #contact, #news {
 	flex:1;
 }
@@ -226,6 +226,7 @@ footer {
 	color: #000;
 }
 #news {
+	flex-basis: 100%;
 	text-align: center;
 	padding-right: 9rem;
 	margin-bottom: 2rem;
