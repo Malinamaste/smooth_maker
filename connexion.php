@@ -43,11 +43,11 @@ if(array_key_exists("email", $_POST)) {
 
         <div class="form-group">
             <label for="email"></label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="Votre adresse email">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Votre adresse email" value="<?php if(array_key_exists("email", $_POST)) { echo $_POST["email"];  }?>">
         </div>
         <div class="form-group">
             <label for="password"></label>
-            <input type="password" name="password" class="form-control" id="password" placeholder="Votre mot de passe">
+            <input type="password" name="password" class="form-control" id="password" placeholder="Votre mot de passe" >
         </div>
         <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="remember" name="remember">
