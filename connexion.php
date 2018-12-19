@@ -1,6 +1,7 @@
 <?php 
 
-include_once "php/classes/user.class.php";
+$page = "connexion";
+include_once "header.php";
 
 if(array_key_exists("email", $_POST)) {
 
@@ -26,10 +27,6 @@ if(array_key_exists("email", $_POST)) {
         $errorMessage = $exception->getMessage();
     }
 }
-
-
-$page = "connexion";
-include_once "header.php";
 
 ?>
 
