@@ -167,7 +167,10 @@ footer {
 		color: #49b46a;
 		font-size: 3em;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8f7d2760092e828dc449b96b6dd17aeb34601275
 
 /* Page Recipe */
 
@@ -223,6 +226,10 @@ footer {
 	font-size: 0.85em;
     text-transform: uppercase;
 }
+#first-section {
+	display: flex;
+	flex-direction: row;
+}
 #search, #contact, #news {
 	flex:1;
 }
@@ -236,6 +243,7 @@ footer {
 	color: #000;
 }
 #news {
+	flex-basis: 100%;
 	text-align: center;
 	padding-right: 9rem;
 	margin-bottom: 2rem;
