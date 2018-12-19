@@ -1,22 +1,7 @@
 
 	</main>
 <!-- FOOTER -->
-<!-- Flat Icon -->
-<link rel="icon" type="image/png" href="images/fruit-juice.png" />
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-		<!-- Reset -->
-		<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
-		<!-- CSS Perso -->
-		<link rel="stylesheet" type="text/css" href="css/base.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-<footer>
+	<footer>
 			<div id="footer" class="container">
 				<div id="logo">
 				<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>

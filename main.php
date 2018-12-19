@@ -1,7 +1,14 @@
 <?php
 
+	include_once "php/models/commentModel.class.php";
+
 	$page = "main";
 	include_once "header.php";
+
+	$commentModel = new CommentModel();
+	$bests = $commentModel->getBestSellers();
+
+	
 ?>
 
 <section id="main-background">
@@ -30,30 +37,42 @@
 	<article id="best-sellers">
 		<h2>Nos Best-Sellers</h2>
 		<ul>
+			<?php foreach($bests as $best): ?>
 			<li>
-				<a href="#">
-					<img src="images/main/smoothie-detox.png" alt="Smoothie Bonne mine">
+				<a href="recipe.php?id=<?php echo $best["idRecipe"] ?>">
+					<img src="images/main/<?php echo $best["imageBest"] ?>" alt="<?php echo $best["name"] ?>">
 				</a>
-				<h3>Bonne mine</h3>
-				<!-- ETOILES NOTATION -->
+				<h3><?php echo $best["name"] ?></h3>
+				
+				<!-- Etoiles : notes moyennes de chaque recette -->
+				<p>
+					<?php $averageRate = $commentModel->getAverageRate($best["idRecipe"]); 
+					
+					$rate = $averageRate["averageRates"]; 
+					$rateNb = substr($rate, 0, 1);
+					$rateDecimal = substr($rate, 2, 1);
+
+					if($rateDecimal > 0)
+						$rateNone = 5-$rateNb-1;
+					else {
+						$rateNone = 5-$rateNb;
+					}
+
+					for($i = 1; $i <= $rateNb; $i++): ?>
+						<i class="fas fa-star"></i>
+					<?php endfor;
+
+					if($rateDecimal >= 5):  ?>
+						<i class="fas fa-star-half-alt"></i>
+					<?php endif;
+
+					for($i = 1; $i <= $rateNone; $i++): ?>
+						<i class="far fa-star"></i>
+					<?php endfor; ?>
+				</p>
 				<a href="#">Clique moi<i class="fas fa-plus-circle"></i></a>
 			</li>
-			<li>
-				<a href="#">
-					<img src="images/main/smoothie-detox2.png" alt="Booster La vie ensoleillée">
-				</a>
-				<h3>La vie ensoleillée</h3>
-				<!-- ETOILES NOTATION -->
-				<a href="#">Clique moi<i class="fas fa-plus-circle"></i></a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/main/smoothie-detox3.png" alt="Smoothie Booster d'humeur">
-				</a>
-				<h3>Booster d'humeur</h3>
-				<!-- ETOILES NOTATION -->
-				<a href="#">Clique moi<i class="fas fa-plus-circle"></i></a>
-			</li>
+			<?php endforeach; ?>
 		</ul>
 	</article>
 

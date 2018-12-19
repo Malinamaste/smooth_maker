@@ -26,6 +26,11 @@ footer {
 #header a:hover {
 	color:#f9a825;
 }
+
+.active {
+	color:#f9a825;
+}
+
 #social li:hover {
 	border: 1px solid #32c147;
     border-radius: 100%;
@@ -119,6 +124,10 @@ footer {
 	}
 	#best-sellers .fa-plus-circle {padding-left: 0.7em;}
 
+	#best-sellers .fa-star-half-alt, #best-sellers .fa-star {
+		color: #49b46a;
+		font-size: 1.2em;
+	}
 	/* RECIPES */
 
 	#recipes a, #findus a {display: flex;}

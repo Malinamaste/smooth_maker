@@ -1,8 +1,8 @@
 
 $(document).ready(function(){
 
-  $(".form-infos").on("submit", function(e) {
-      e.preventDefault();
-  });
+  //$("#recipeLink").on("click", function() {
+      $("#recipeLink").addClass("active");
+  //});
 
 });

@@ -66,7 +66,7 @@ $user = $userSession->getFullName();
 						<a href="recipes.php">Nos recettes</a>
 					</li>
 					<li>
-						<a href="cobntact.php">Contact</a>
+						<a href="contact.php">Contact</a>
 					</li>
 				</ul>
 			</nav>
