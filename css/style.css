@@ -8,7 +8,6 @@ h2, h3 {
 }
 footer {
 	color: #000;
-    padding: 4em 0;
 }
 /* HEADER */
 #header {
@@ -176,7 +175,7 @@ footer {
 
 /* RECIPES PAGE */
 
-#all-recipes {
+#all-recipes, .about-us {
 	background-color: #fff;
 	padding: 5em 7em 0 7em;
 	display: flex;
@@ -351,12 +350,6 @@ footer {
 #search, #contact, #news {
 	flex:1;
 }
-#search ul {
-	margin-top: 2em;
-}
-#contact ul {
-	margin-top: 2em;
-}
 #contact a {
 	color: #000;
 }
@@ -367,7 +360,7 @@ footer {
 	margin-bottom: 2rem;
 }
 /* CONCEPT */
-/*
+
 .about-us h1 {
 	color: #9E171F;
     font-size: 1.8em;
@@ -377,17 +370,46 @@ footer {
 	margin: 0 auto;
 	margin-bottom: 1rem;
 }
-section span {
+.about-us span {
+	color: #49b46a;
 	font-weight: bold;
 	font-size: 2rem;
 }
-section {
-	text-align: center;
+#concept {
+	padding: 2rem 7em 0 7em;
 }
-section p {
-	margin: 2rem;
+#concept article {
+	display: flex;
+	flex-wrap: wrap;
+	flex:1;
+	margin: 4rem 0 4rem 7rem;
 }
-*/
+#concept #flex-basis {
+	flex-basis: 100%;
+}
+#concept h2 {
+	padding-bottom: 1rem;
+}
+#flex p {
+	margin-left: 3rem;
+}
+#hawaii {
+	height: 326px;
+}
+#smoothie{
+	height: 220px;
+}
+#smoothie2 {
+	height: 272px;
+}
+#flex {
+	display: flex;
+	margin: 6rem auto;
+}
+#team {
+	height: 424px;
+	padding-bottom: 2rem;
+}
 
 /*
 	RESPONSIVE

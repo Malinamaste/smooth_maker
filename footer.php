@@ -16,8 +16,8 @@
 						<ul>
 							<li>34 rue des fruits</li>
 							<li>69002 Lyon</li>
-							<li>Telephone: +33 4 25 45 89 47</li>
-							<li>E-mail: <a href="#">info@wai-smoothies.com</a></li>
+							<li><i class="fas fa-phone-volume"></i>: +33 4 25 45 89 47</li>
+							<li><i class="fas fa-at"></i>: <a href="#">info@wai-smoothies.com</a></li>
 							<li>Ouvert du lundi au samedi de 8h à 19h (hors jours fériés)</li>
 						</ul>
 					</section>
