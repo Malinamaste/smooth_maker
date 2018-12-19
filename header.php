@@ -3,14 +3,7 @@
 include_once "php/classes/user.class.php";
 
 $userSession = new User();  
-
-if($userSession->isAuthenticated() == false){
-	header("Location: connexion.php");
-	exit();
-}
-else {
-	$user = $userSession->getFullName();
-}
+$user = $userSession->getFullName();
 
 ?>
 
@@ -43,7 +36,7 @@ else {
 			<section id="connexion">
 				<p id="nameUserConnect">Bonjour <?php echo $user ?> ! </p>
 				<a href="connexion.php" title="Connectez-vous"><i class="fas fa-user"></i></a>	
-				<a href="main.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
+				<a href="logout.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
 			</section>
 			<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
 			<div id="wrapper">

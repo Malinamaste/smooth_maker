@@ -166,7 +166,9 @@ footer {
 		color: #49b46a;
 		font-size: 3em;
 	}
+	
 /* RECIPES PAGE */
+
 #all-recipes {
 	background-color: #fff;
 	padding: 5em 7em 0 7em;
@@ -203,27 +205,77 @@ footer {
 		padding-top: 0.8em;
 		font-size: 1.2em;
 	}
-/* RECIPE PAGE */
+
+/* Page Recipe */
+
 #ingredient img {
 	width: 50px;
 }
+
 #recipeArticle {
 	display: flex;
 	align-items: center;
 	margin-bottom: 30px;	
 	background: white;
 }
-.recipePage h2 {
+
+#recipeSection h2 {
 	flex-basis: 100%;
 	background: white;
 }
+
 #recipeArticle li {
 	padding: 5px;
 }
-#commName p span {
-	font-style: italic;
+
+#commName span, form legend {
+	font-weight: bold;
 }
+
+#commentaires {
+	background: rgba(255, 255, 255, 0.8);
+	padding: 2em;
+}
+
+#commentaires article {
+	padding: 10px 0;
+}
+
+#commentaires #btnOk {
+	background: #32c147;
+}
+
+#commentaires .fa-star {
+	color: #32c147;
+	font-size: 25px;
+}
+
+#commentaires .fa-comment-dots, #commentaires .fa-comments {
+	color: #32c147;
+	font-size: 20px;
+}
+
+#commentaires #btnCancel {
+	background: rgb(226, 60, 71);
+}
+
+#commentaires #btnCancel, #commentaires #btnOk  {
+	color: white;
+	padding: 5px 10px;
+	cursor: pointer;
+	border: 0;
+}
+
+#commentaires form li {
+	padding: 10px 0;
+}
+
+#commentaires #comm {
+	padding: 0 5px;
+}
+
 /* FOOTER */
+
 #footer {
 	display: flex;
 	flex-wrap: wrap;
@@ -272,6 +324,7 @@ footer {
 	margin-bottom: 2rem;
 }
 /* CONCEPT */
+/*
 h1 {
 	color: #9E171F;
     font-size: 1.8em;
@@ -291,6 +344,7 @@ section {
 section p {
 	margin: 2rem;
 }
+*/
 
 /*
 	RESPONSIVE
