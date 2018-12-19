@@ -34,8 +34,8 @@ else {
 		<!-- Reset -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
 		<!-- CSS Perso -->
-		<link rel="stylesheet" type="text/css" href="css/base.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 	</head>
 	<body>
 		<!-- HEADER -->

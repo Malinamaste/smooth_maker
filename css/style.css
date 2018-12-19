@@ -167,10 +167,6 @@ footer {
 		color: #49b46a;
 		font-size: 3em;
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> 8f7d2760092e828dc449b96b6dd17aeb34601275
 
 /* Page Recipe */
 
@@ -185,7 +181,7 @@ footer {
 	background: white;
 }
 
-.recipePage h2 {
+#recipeSection h2 {
 	flex-basis: 100%;
 	background: white;
 }
@@ -194,10 +190,51 @@ footer {
 	padding: 5px;
 }
 
-#commName p span {
-	font-style: italic;
+#commName span, form legend {
+	font-weight: bold;
 }
 
+#commentaires {
+	background: rgba(255, 255, 255, 0.8);
+	padding: 2em;
+}
+
+#commentaires article {
+	padding: 10px 0;
+}
+
+#commentaires #btnOk {
+	background: #32c147;
+}
+
+#commentaires .fa-star {
+	color: #32c147;
+	font-size: 25px;
+}
+
+#commentaires .fa-comment-dots, #commentaires .fa-comments {
+	color: #32c147;
+	font-size: 20px;
+}
+
+#commentaires #btnCancel {
+	background: rgb(226, 60, 71);
+}
+
+#commentaires #btnCancel, #commentaires #btnOk  {
+	color: white;
+	padding: 5px 10px;
+	cursor: pointer;
+	border: 0;
+}
+
+#commentaires form li {
+	padding: 10px 0;
+}
+
+#commentaires #comm {
+	padding: 0 5px;
+}
 
 /* FOOTER */
 #footer {
