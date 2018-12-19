@@ -46,7 +46,6 @@ footer {
 	color: gray;
 	margin-right: 2rem;
 }
-
 #main-nav, #social {
 	align-self: flex-end;
 }
@@ -118,9 +117,7 @@ footer {
 		font-size: 1.2em;
 	}
 	#best-sellers .fa-plus-circle {padding-left: 0.7em;}
-
 	/* RECIPES */
-
 	#recipes a, #findus a {display: flex;}
 	#recipes h3 {
 		font-size: 1.7em;
@@ -135,6 +132,7 @@ footer {
 		color: #49b46a;
 		font-size: 3em;
 	}
+	#recipes p, #findus p {line-height: 2.2;}
 	.wrap-left {
 		display: flex;
     	flex-direction: column;
@@ -164,9 +162,7 @@ footer {
 		color: #49b46a;
 		font-size: 3em;
 	}	
-
 /* RECIPES PAGE */
-
 #all-recipes {
 	background-color: #fff;
 	padding: 5em 7em 0 7em;
@@ -208,58 +204,83 @@ footer {
 		font-size: 1.2em;
 	}
 /* RECIPE PAGE */
-#ingredient img {
-	width: 50px;
-}
-#recipeArticle {
+#recipeSection {
+	background-color: rgba(255,255,255, 0.8);
+	padding: 3em 5em;
 	display: flex;
-	align-items: center;
-	margin-bottom: 30px;	
-	background: white;
+    flex-direction: column;
 }
 #recipeSection h2 {
-	flex-basis: 100%;
-	background: white;
+    font-size: 2em;
+    margin-bottom: 1.2em;
+    margin-left: 5em;
 }
-#recipeArticle li {
-	padding: 5px;
-}
-#commName span, form legend {
-	font-weight: bold;
-}
-#commentaires {
-	background: rgba(255, 255, 255, 0.8);
-	padding: 2em;
-}
-#commentaires article {
-	padding: 10px 0;
-}
-#commentaires #btnOk {
-	background: #32c147;
-}
-#commentaires .fa-star {
-	color: #32c147;
-	font-size: 25px;
-}
-#commentaires .fa-comment-dots, #commentaires .fa-comments {
-	color: #32c147;
-	font-size: 20px;
-}
-#commentaires #btnCancel {
-	background: rgb(226, 60, 71);
-}
-#commentaires #btnCancel, #commentaires #btnOk  {
-	color: white;
-	padding: 5px 10px;
-	cursor: pointer;
-	border: none;
-}
-#commentaires form li {
-	padding: 10px 0;
-}
-#commentaires #comm {
-	padding: 0 5px;
-}
+	/* RECIPE ARTICLE */
+	#recipeArticle {
+		display: flex;
+		margin: 0 auto;
+	}
+	#recipeArticle ul {
+		display: flex;
+    	flex-direction: column;
+		flex: 1;
+		justify-content: space-evenly;
+	}
+	/* #recipeArticle li {
+		padding: 5px;
+	} */
+	#recipeArticle p {
+		font-size: 1.3em;
+		color: #32c147;
+	}
+	#ingredient img {
+		max-width: 50px;
+	}
+	#ingredient span {
+		color: #9E171F;
+		font-family: 'Pacifico', cursive;
+		font-size: 1.8em;
+		margin-left: 1em;
+	}
+	#recipePicture img {max-width: 30em;}
+	/* COMMENTAIRES */
+	#commName span, form legend {
+		font-weight: bold;
+	}
+	#commentaires {
+		background: rgba(255, 255, 255, 0.8);
+		padding: 2em;
+		margin-top: 2em;
+	}
+	#commentaires article {
+		padding: 10px 0;
+	}
+	#commentaires #btnOk {
+		background: #32c147;
+	}
+	#commentaires .fa-star {
+		color: #32c147;
+		font-size: 25px;
+	}
+	#commentaires .fa-comment-dots, #commentaires .fa-comments {
+		color: #32c147;
+		font-size: 20px;
+	}
+	#commentaires #btnCancel {
+		background: rgb(226, 60, 71);
+	}
+	#commentaires #btnCancel, #commentaires #btnOk  {
+		color: white;
+		padding: 5px 10px;
+		cursor: pointer;
+		border: none;
+	}
+	#commentaires form li {
+		padding: 10px 0;
+	}
+	#commentaires #comm {
+		padding: 0 5px;
+	}
 /* USER PAGE */
 #new-user {
 	background: rgba(255, 255, 255, 0.8);

@@ -1,39 +1,39 @@
 <?php
 
-include_once "php/classes/user.class.php";
-include_once "php/models/recipeModel.class.php";
-include_once "php/models/commentModel.class.php";
-include_once "header.php";
+    include_once "php/classes/user.class.php";
+    include_once "php/models/recipeModel.class.php";
+    include_once "php/models/commentModel.class.php";
+    include_once "header.php";
 
-$idRecipe = $_GET["id"];
+    $idRecipe = $_GET["id"];
 
-// Récupère la recette
-$recipeModel = new RecipeModel();
-$recipe = $recipeModel->getRecipe($idRecipe);
+    // Récupère la recette
+    $recipeModel = new RecipeModel();
+    $recipe = $recipeModel->getRecipe($idRecipe);
 
-// Récupère tous les ingrédients de la recette
-$ingredients = $recipeModel->getIngredients($idRecipe);
+    // Récupère tous les ingrédients de la recette
+    $ingredients = $recipeModel->getIngredients($idRecipe);
 
-// Récupère tous les commentaires de la recette
-$commentModel = new CommentModel();
-$comments = $commentModel->getComments($idRecipe);
-
-if(array_key_exists("commentaire", $_POST)) {
-
-    /*if($userSession->isAuthenticated() == false){
-        header("Location: connexion.php");
-        exit();
-    }*/
-
-    $userSession = new User();  
-    $userId = $userSession->getUserId();
-
-    $commentModel = new CommentModel();  
-    $commentModel->createComment($idRecipe, $userId);
-
+    // Récupère tous les commentaires de la recette
+    $commentModel = new CommentModel();
     $comments = $commentModel->getComments($idRecipe);
+
+    if(array_key_exists("commentaire", $_POST)) {
+
+        /*if($userSession->isAuthenticated() == false){
+            header("Location: connexion.php");
+            exit();
+        }*/
+
+        $userSession = new User();  
+        $userId = $userSession->getUserId();
+
+        $commentModel = new CommentModel();  
+        $commentModel->createComment($idRecipe, $userId);
+
+        $comments = $commentModel->getComments($idRecipe);
     
-}
+    }
 
 ?>
 
@@ -43,17 +43,25 @@ if(array_key_exists("commentaire", $_POST)) {
         <h2><?php echo $recipe["name"] ?></h2>
         <article id="recipeArticle">
             <ul> 
-                <li><h3>Ingrédients</h3></li>
                 <?php foreach($ingredients as $ingredient): ?>    
-                    <li id="ingredient"><img alt="Image de l'ingrédient" src="images/products/<?php echo $ingredient["productImg"] ?>"><span><?php echo $ingredient["quantityProduct"] . " ". $ingredient["productName"] ?></span></li>
+                <li id="ingredient">
+                    <img alt="Image de l'ingrédient" src="images/products/<?php echo $ingredient["productImg"] ?>">
+                    <span><?php echo $ingredient["quantityProduct"] . " ". $ingredient["productName"] ?></span>
+                </li>
                 <?php endforeach; ?>
-                <li><p><?php echo $recipe["description"] ?><p></li>
+                <li>
+                    <p><?php echo $recipe["description"] ?><p>
+                </li>
             </ul>
-            <ul>
-                <li><img src="images/Recipes/<?php echo $recipe["image"] ?>"></li>
+
+            <ul id="recipePicture">
+                <li>
+                    <img src="images/Recipes/<?php echo $recipe["image"] ?>">
+                </li>
             <ul>
         </article>
     </section>
+
     <section id="commentaires">
         <article>
             <?php 
@@ -97,6 +105,6 @@ if(array_key_exists("commentaire", $_POST)) {
 
 <?php
 
-include_once "footer.php";
+    include_once "footer.php";
 
 ?>
