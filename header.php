@@ -34,8 +34,8 @@ $userSession = new User();
 		<!-- Reset -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
 		<!-- CSS Perso -->
-		<link rel="stylesheet" type="text/css" href="css/base.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 	</head>
 	<body>
 		<!-- HEADER -->
@@ -43,7 +43,7 @@ $userSession = new User();
 			<section id="connexion">
 				<p id="nameUserConnect">Bonjour <?php echo $user ?> ! </p>
 				<a href="connexion.php" title="Connectez-vous"><i class="fas fa-user"></i></a>	
-				<a href="main.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
+				<a href="logout.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
 			</section>
 			<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
 			<div id="wrapper">
