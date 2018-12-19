@@ -6,18 +6,42 @@
 
 <section id="main-background">
  <section class="about-us">
-      <h1>Pourquoi choisir nos smoothies ?!!!</h1>
-            <span>Des smoothies 100% naturels</span>
-              <p>Phasellus magna justo, placerat id iaculis sit amet, aliquet lobortis tellus. Vestibulum pharetra mauris egestas, vehicula leo sed, tincidunt diam. Aenean velit velit, sollicitudin sit amet scelerisque et, rutrum vel augue. Ut eget pulvinar nibh. Praesent mollis laoreet blandit. Nulla facilisi. Quisque sapien massa, molestie et orci sed, euismod mollis lacus. Integer accumsan erat sed porta mollis. Aliquam urna mi, faucibus ut blandit vitae, ultrices laoreet erat. Aenean sem arcu, tincidunt vitae purus vel, blandit fringilla magna. Nulla porta tellus turpis, vel eleifend ligula euismod at.</p> 
+     <section>
+      <h1>Notre histoire ...</h1>
+            <span>Tout est parti de notre voyage dans les tropiques où la magie est apparue :-D</span>
+        <div id="hawaii">
+            <img src="images/concept/hawaii-maui-mountain-999089.jpg" alt="paysage hawaii">
+        </div>
+        <div id="flex">
+            <div><img src="images/concept/beach-celebrate-cheers-1058433.jpg" alt="smoothie rouge"></div>
+            <p>Ut tempor nisl in enim faucibus, ut venenatis purus volutpat. Vivamus vel posuere diam. In nunc ex, tempor viverra tortor a, ullamcorper elementum ligula. Donec nec turpis ullamcorper, accumsan leo at, placerat diam. Vivamus faucibus pretium pellentesque.</p>
+        </div>
     </section>
-    <section class="about-us">
-       <h1>Des partenaires locaux et bio</h1>
-              <p>Ut tempor nisl in enim faucibus, ut venenatis purus volutpat. Vivamus vel posuere diam. In nunc ex, tempor viverra tortor a, ullamcorper elementum ligula. Donec nec turpis ullamcorper, accumsan leo at, placerat diam. Vivamus faucibus pretium pellentesque. Donec semper ut arcu vitae laoreet. Proin vitae volutpat risus. Pellentesque maximus bibendum nibh at fermentum. Donec dignissim nulla id sem elementum lobortis. Suspendisse auctor tortor in tempor efficitur. Donec lacus diam, tristique at erat vitae, convallis rutrum ligula. Sed eget viverra nibh, vitae ornare mauris. Cras quis pretium ligula, vel finibus purus. Etiam commodo augue gravida ullamcorper dictum!</p>
+    <section id="concept">
+       <h1>Notre concept ...</h1>
+       <div id="article">
+        <article>
+            <h2>Du BIO à gogo !</h2>
+              <p>Ut tempor nisl in enim faucibus, ut venenatis purus volutpat. Vivamus vel posuere diam. In nunc ex, tempor viverra tortor a, ullamcorper elementum ligula. Donec nec turpis ullamcorper, accumsan leo at, placerat diam. Vivamus faucibus pretium pellentesque. Donec semper ut arcu vitae laoreet. Proin vitae volutpat risus.</p>
+        </article>
+        <article>
+            <h2>Des recettes ancestrales ...</h2>
+              <p> Pellentesque maximus bibendum nibh at fermentum. Donec dignissim nulla id sem elementum lobortis. Suspendisse auctor tortor in tempor efficitur. Donec lacus diam, tristique at erat vitae, convallis rutrum ligula. Sed eget viverra nibh, vitae ornare mauris. Cras quis pretium ligula, vel finibus purus. Etiam commodo augue gravida ullamcorper dictum!</p>
+        </article>
+        </div>
+        <div id="smoothie">
+              <img src="images/concept/cleanise-decoration-flora-1030909.jpg" alt="smoothie fraise">
+        </div>
+        
     </section>
-    <section class="about-us">
-       <h1>Un véritable engagement Eco-Responsable</h1>
-              <p>Ut tempor nisl in enim faucibus, ut venenatis purus volutpat. Vivamus vel posuere diam. In nunc ex, tempor viverra tortor a, ullamcorper elementum ligula. Donec nec turpis ullamcorper, accumsan leo at, placerat diam. Vivamus faucibus pretium pellentesque. Donec semper ut arcu vitae laoreet. Proin vitae volutpat risus. Pellentesque maximus bibendum nibh at fermentum. Donec dignissim nulla id sem elementum lobortis. Suspendisse auctor tortor in tempor efficitur. Donec lacus diam, tristique at erat vitae, convallis rutrum ligula. Sed eget viverra nibh, vitae ornare mauris. Cras quis pretium ligula, vel finibus purus. Etiam commodo augue gravida ullamcorper dictum!</p>
+    <section>
+      <h1>Notre équipe ...</h1>
+            <span>Un groupe jeune et dynamique à votre service</span>
+            <div id="team">
+            <img src="images/concept/IMG_20181219_133835.jpg" alt="notre équipe">
+            </div>
     </section>
+</section>
 </section>
 
 

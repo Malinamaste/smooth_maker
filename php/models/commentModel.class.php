@@ -52,4 +52,23 @@ class CommentModel {
 
         return $averageRate;
     }
+
+    public function getBestSellers(){
+
+        include "php/bdd.php";
+
+        $req = $bdd->prepare("
+        SELECT AVG(rates) AS averageRates, idRecipe, name, imageBest
+        FROM Comments
+        INNER JOIN Recipe ON Recipe.id = Comments.idRecipe
+        GROUP BY idRecipe
+        ORDER BY averageRates DESC
+        LIMIT 3
+        ");
+
+        $req->execute();
+        $bestSellers = $req->fetchAll();
+
+        return $bestSellers;
+    }
 }

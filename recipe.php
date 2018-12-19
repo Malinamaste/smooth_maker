@@ -20,10 +20,17 @@
 
     if(array_key_exists("commentaire", $_POST)) {
 
+<<<<<<< HEAD
         /*if($userSession->isAuthenticated() == false){
             header("Location: connexion.php");
             exit();
         }*/
+=======
+    if($userSession->isAuthenticated() == false){
+        header("Location: connexion.php");
+        exit();
+    }
+>>>>>>> 7ee872721841b904c99e8ca9de295bca886ec7d1
 
         $userSession = new User();  
         $userId = $userSession->getUserId();
