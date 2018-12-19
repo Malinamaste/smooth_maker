@@ -11,6 +11,7 @@ footer {
     padding: 4em 0;
 }
 /* HEADER */
+
 #header {
 	display: flex;
     flex-flow: row wrap;
@@ -40,6 +41,7 @@ footer {
 	justify-content: flex-end;
 	border-bottom: 2px solid gray;
 	margin-bottom: 1rem;
+	align-items: center;
 }
 #connexion a {
 	color: gray;
@@ -68,6 +70,13 @@ footer {
     flex-direction: column;
     justify-content: inherit;
 }
+
+#nameUserConnect {
+	padding: 0 10px;
+	color: #4a4a4a;
+}
+
+
 /* MAIN */
 #main-background {
 	background: url("../images/background/background.png") no-repeat center;
@@ -221,10 +230,6 @@ footer {
 	padding: 2em;
 	border-top: #f9a825 4px solid;
 }
-/* FOOTER */
-#footer {
-	display: flex;
-}
 #logo {
 	flex:1;
 }
@@ -244,6 +249,10 @@ footer {
 	font-size: 0.85em;
     text-transform: uppercase;
 }
+#first-section {
+	display: flex;
+	flex-direction: row;
+}
 #search, #contact, #news {
 	flex:1;
 }
@@ -257,11 +266,31 @@ footer {
 	color: #000;
 }
 #news {
+	flex-basis: 100%;
 	text-align: center;
 	padding-right: 9rem;
 	margin-bottom: 2rem;
 }
-
+/* CONCEPT */
+h1 {
+	color: #9E171F;
+    font-size: 1.8em;
+    border-bottom: 2px solid #49b46a;
+    padding-bottom: 0.7em;
+    width: 90%;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+}
+section span {
+	font-weight: bold;
+	font-size: 2rem;
+}
+section {
+	text-align: center;
+}
+section p {
+	margin: 2rem;
+}
 
 /*
 	RESPONSIVE

@@ -39,7 +39,7 @@
 				</div>
 				<div id="news">
 					<h5>Inscrivez-vous à notre newsletters</h5>
-					<ul><input type="email" id="email" pattern=".+@globex.com" size="30" placeholder="Votre mail" required></ul>
+					<ul><input type="email" id="email-news" pattern=".+@globex.com" size="30" placeholder="Votre mail"></ul>
 				</div>
 				<div id="infos">
 					<a href="#">Mentions légales</a>-<a href="#"> Contact</a>.

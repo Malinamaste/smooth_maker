@@ -1,3 +1,19 @@
+<?php
+
+include_once "php/classes/user.class.php";
+
+$userSession = new User();  
+
+if($userSession->isAuthenticated() == false){
+	header("Location: connexion.php");
+	exit();
+}
+else {
+	$user = $userSession->getFullName();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -18,13 +34,14 @@
 		<!-- Reset -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
 		<!-- CSS Perso -->
-		<link rel="stylesheet" type="text/css" href="css/base.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 	</head>
 	<body>
 		<!-- HEADER -->
 		<header id="header">
 			<section id="connexion">
+				<p id="nameUserConnect">Bonjour <?php echo $user ?> ! </p>
 				<a href="connexion.php" title="Connectez-vous"><i class="fas fa-user"></i></a>	
 				<a href="main.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
 			</section>
@@ -46,7 +63,7 @@
 			<nav id="main-nav">
 				<ul>
 					<li>
-						<a href="concept.html">Notre concept</a>
+						<a href="concept.php">Notre concept</a>
 					</li>
 					<li>
 						<a href="recipes">Nos recettes</a>
@@ -58,5 +75,5 @@
 			</nav>
 			</div>
 		</header>
-		<main>
+	<main>
 		

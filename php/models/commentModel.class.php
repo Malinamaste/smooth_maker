@@ -7,7 +7,7 @@ class CommentModel {
         include "php/bdd.php";
 
         $req = $bdd->prepare("
-        SELECT comment, firstName, lastName, Comments.id AS idComments
+        SELECT comment, firstName, lastName, Comments.id AS idComments, rates
         FROM Comments
         INNER JOIN User ON User.id = Comments.idUser
         WHERE idRecipe = ?
@@ -23,18 +23,17 @@ class CommentModel {
 
         include "php/bdd.php";
 
-        $req = $bdd->prepare("INSERT INTO User
+        $comment = $_POST["commentaire"];
+        $rate = $_POST["rates"];
+
+        $req = $bdd->prepare("INSERT INTO Comments
         (
-            lastName,
-            firstName,
-            email,
-            password,
-            zip
-        ) VALUES (?, ?, ?, ?, ?)");
+            comment,
+            idUser,
+            idRecipe, 
+            rates
+        ) VALUES (?, ?, ?, ?)");
 
-        $req->execute([$idRecipe]);
-        $comments = $req->fetchAll();
-
-        return $comments;
+        $req->execute([$comment, $idUser, $idRecipe, $rate]);
     }
 }
