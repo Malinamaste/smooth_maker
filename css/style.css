@@ -33,7 +33,8 @@ footer {
 #social li:hover {
 	border: 1px solid #32c147;
     border-radius: 100%;
-    padding: 10px;
+	padding: 10px;
+	color:#f9a825;
 }
 #header img {
 	height: 10em;
@@ -63,7 +64,9 @@ footer {
 #social ul li {
 	border: 1px solid #f9a825;
     border-radius: 100%;
-    padding: 10px;
+	padding: 10px;
+	height: 50px;
+	width: 50px;
 }
 #social ul li:nth-child(2) {
 	margin:0 1em;
@@ -373,7 +376,9 @@ footer {
 }
 
 /* CONCEPT */
-
+.about-us {
+	padding: 5em 4em 0 4em;
+}
 .about-us h1 {
 	color: #9E171F;
     font-size: 1.8em;
@@ -389,40 +394,38 @@ footer {
 	font-size: 2rem;
 }
 #concept {
-	padding: 2rem 7em 0 7em;
-}
-#concept article {
 	display: flex;
 	flex-wrap: wrap;
-	flex:1;
-	margin: 4rem 0 4rem 7rem;
 }
-#concept #flex-basis {
-	flex-basis: 100%;
+#article {
+	flex:2;
+	margin:3rem;
+}
+#smoothie {
+	flex:1;
+	margin-top: 3rem;
 }
 #concept h2 {
 	padding-bottom: 1rem;
 }
-#flex p {
-	margin-left: 3rem;
+#flex p{
+	margin-left: 7rem;
+	line-height: 1.5em;
+}
+#article p {
+	margin-right: 7rem;
+	line-height: 1.5em;
 }
 #hawaii {
-	height: 326px;
+	margin-top: 3rem;
 }
-#smoothie{
-	height: 220px;
-}
-#smoothie2 {
-	height: 272px;
-}
+
 #flex {
 	display: flex;
-	margin: 6rem auto;
+	margin: 6rem 15px;
 }
 #team {
-	height: 424px;
-	padding-bottom: 2rem;
-}
+	margin-top: 2rem;
 
 /*
 	RESPONSIVE
