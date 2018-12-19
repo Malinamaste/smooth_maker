@@ -46,10 +46,10 @@
 			<nav id="main-nav">
 				<ul>
 					<li>
-						<a href="#">Notre concept</a>
+						<a href="concept.html">Notre concept</a>
 					</li>
 					<li>
-						<a href="#">Nos recettes</a>
+						<a href="recipes">Nos recettes</a>
 					</li>
 					<li>
 						<a href="#">Contact</a>
