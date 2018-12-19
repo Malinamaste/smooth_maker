@@ -4,31 +4,52 @@
 		<footer>
 			<div id="footer" class="container">
 				<div id="logo">
-					<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
+					<a href="main.php">
+						<img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO
+					</a>
 				</div>
-				<div id="first-section">
-					<section id="search">
-						<p>Recherche</p>
-							<ul><input type="text" class="search" placeholder="Vos saveurs..." required></ul>
-					</section>
-					<section id="contact">
-						<p>Contact</p>
+				<section id="first-section">
+					<article id="contact">						
 						<ul>
-							<li>34 rue des fruits</li>
-							<li>69002 Lyon</li>
-							<li><i class="fas fa-phone-volume"></i>: +33 4 25 45 89 47</li>
-							<li><i class="fas fa-at"></i>: <a href="#">info@wai-smoothies.com</a></li>
-							<li>Ouvert du lundi au samedi de 8h à 19h (hors jours fériés)</li>
+							<li>
+								<p><i class="far fa-envelope"></i> Contact</p>
+							</li>
+							<li>
+								<p>34 rue des fruits</p>
+								<p>69002 Lyon</p>
+							</li>
+							<li>
+								<i class="fas fa-phone fa-rotate-90"></i> 04 25 45 89 47
+							</li>
+							<li>
+								<i class="fas fa-paper-plane"></i> <a href="mailTo:info@wai-smoothies.com">info@wai-smoothies.com</a>
+							</li>
+							<li>
+								<p>Ouvert du lundi au samedi de 8h à 19h (hors jours fériés)</p>
+							</li>
 						</ul>
-					</section>
-				</div>
-				<div id="news">
-					<h5>Inscrivez-vous à notre newsletters</h5>
-					<ul><input type="email" id="email-news" pattern=".+@globex.com" size="30" placeholder="Votre mail"></ul>
-				</div>
-				<div id="infos">
+					</article>
+					<article>						
+						<ul id="search">
+							<li>
+								<p><i class="fas fa-search"></i>Recherche</p>
+							</li>
+							<li>
+								<input type="text" id="search" class="search" size="30" placeholder="Vos saveurs...">
+							</i>
+						</ul>
+						<ul id="news">
+							<li>
+								<p><i class="far fa-newspaper"></i> Inscrivez-vous à notre newsletters</p>
+							</li>
+							<li>
+								<input type="email" id="email-news" size="30" placeholder="Votre email">
+						</ul>
+					</article>
+				</section>
+				<p id="infos">
 					<a href="#">Mentions légales</a>-<a href="#"> Contact</a>.
-				</div>
+				</p>
 			</div>
 		</footer>
 		<!-- Jquery -->
