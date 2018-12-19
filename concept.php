@@ -10,10 +10,10 @@
       <h1>Notre histoire ...</h1>
             <span>Tout est parti de notre voyage dans les tropiques où la magie est apparue :-D</span>
         <div id="hawaii">
-            <img src="img concept/hawaii-maui-mountain-999089.jpg" alt="paysage hawaii">
+            <img src="images/concept/hawaii-maui-mountain-999089.jpg" alt="paysage hawaii">
         </div>
         <div id="flex">
-            <div><img src="img concept/beach-celebrate-cheers-1058433.jpg" alt="smoothie rouge"></div>
+            <div><img src="images/concept/beach-celebrate-cheers-1058433.jpg" alt="smoothie rouge"></div>
             <p>Ut tempor nisl in enim faucibus, ut venenatis purus volutpat. Vivamus vel posuere diam. In nunc ex, tempor viverra tortor a, ullamcorper elementum ligula. Donec nec turpis ullamcorper, accumsan leo at, placerat diam. Vivamus faucibus pretium pellentesque.</p>
         </div>
     </section>
@@ -30,7 +30,7 @@
         </article>
         </div>
         <div id="smoothie">
-              <img src="img concept/cleanise-decoration-flora-1030909.jpg" alt="smoothie fraise">
+              <img src="images/concept/cleanise-decoration-flora-1030909.jpg" alt="smoothie fraise">
         </div>
         
     </section>
@@ -38,7 +38,7 @@
       <h1>Notre équipe ...</h1>
             <span>Un groupe jeune et dynamique à votre service</span>
             <div id="team">
-            <img src="img concept/IMG_20181219_133835.jpg" alt="notre équipe">
+            <img src="images/concept/IMG_20181219_133835.jpg" alt="notre équipe">
             </div>
     </section>
 </section>
