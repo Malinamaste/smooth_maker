@@ -1,7 +1,5 @@
 <?php 
 
-include_once "php/models/userModel.class.php";
-
 if(array_key_exists("email", $_POST)) {
 
     $errorMessage = "";
