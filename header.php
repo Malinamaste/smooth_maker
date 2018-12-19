@@ -1,3 +1,19 @@
+<?php
+
+include_once "php/classes/user.class.php";
+
+$userSession = new User();  
+
+if($userSession->isAuthenticated() == false){
+	header("Location: connexion.php");
+	exit();
+}
+else {
+	$user = $userSession->getFullName();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -25,38 +41,39 @@
 		<!-- HEADER -->
 		<header id="header">
 			<section id="connexion">
+				<p id="nameUserConnect">Bonjour <?php echo $user ?> ! </p>
 				<a href="connexion.php" title="Connectez-vous"><i class="fas fa-user"></i></a>	
 				<a href="main.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
 			</section>
 			<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
 			<div id="wrapper">
-			<nav id="social">
-				<ul>
-					<li>
-						<a href="#"><i class="fab fa-facebook-f"></i></a>
-					</li>
-					<li>
-						<a href="#"><i class="fab fa-pinterest-p"></i></a>
-					</li>
-					<li>
-						<a href="#"><i class="fab fa-instagram"></i></a>
-					</li>
-				</ul>
-			</nav>
-			<nav id="main-nav">
-				<ul>
-					<li>
-						<a href="concept.html">Notre concept</a>
-					</li>
-					<li>
-						<a href="recipes">Nos recettes</a>
-					</li>
-					<li>
-						<a href="#">Contact</a>
-					</li>
-				</ul>
-			</nav>
+				<nav id="social">
+					<ul>
+						<li>
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-pinterest-p"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+						</li>
+					</ul>
+				</nav>
+				<nav id="main-nav">
+					<ul>
+						<li>
+							<a href="concept.php">Notre concept</a>
+						</li>
+						<li>
+							<a href="recipes.php">Nos recettes</a>
+						</li>
+						<li>
+							<a href="contact.php">Contact</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</header>
-		<main>
+	<main>
 		

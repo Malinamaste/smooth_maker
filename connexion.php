@@ -56,7 +56,10 @@ include_once "header.php";
             <input type="checkbox" class="form-check-input" id="remember" name="remember">
             <label class="form-check-label" for="remember">Se souvenir de moi</label>
         </div>
-        <button id="connexion" class="btn btn-primary">Se connecter</button>
+        <div>
+            <button id="connexion" class="btn btn-primary">Se connecter</button>
+            <a id="inscrire" class="btn btn-primary" href="user.php">S'inscrire</a>
+        </div>
     </form>
 <section>
 

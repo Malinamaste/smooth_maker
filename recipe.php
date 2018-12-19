@@ -27,9 +27,10 @@ if(array_key_exists("commentaire", $_POST)) {
 
     $userSession = new User();  
     $userId = $userSession->getUserId();
-    
 
-    $userSession = new User();  
+    $commentModel = new CommentModel();  
+    $commentModel->createComment($userId, $idRecipe);
+
 }
 
 ?>
@@ -63,6 +64,14 @@ if(array_key_exists("commentaire", $_POST)) {
         <fieldset>
             <legend><i class="far fa-comment"></i> Nouveau commentaire</legend>
             <ul>
+                <li>
+                    <label for="rates"> </label>
+                    <input type= "radio" name="rates" value="1"> <i class="far fa-star"></i>
+                    <input type= "radio" name="rates" value="2"> <i class="far fa-star"></i>
+                    <input type= "radio" name="rates" value="3"> <i class="far fa-star"></i>
+                    <input type= "radio" name="rates" value="4"> <i class="far fa-star"></i>
+                    <input type= "radio" name="rates" value="5"> <i class="far fa-star"></i>
+                </li>
                 <li>
                     <label for="commentaire"> </label>
                     <textarea rows="4" cols="57" name="commentaire" id="commentaire" ></textarea>

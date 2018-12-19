@@ -1,4 +1,5 @@
 /* GENERAL */
+
 img {
 	max-width: 100%;
 }
@@ -6,7 +7,9 @@ footer {
 	color: #000;
     padding: 4em 0;
 }
+
 /* HEADER */
+
 #header {
 	display: flex;
     flex-flow: row wrap;
@@ -36,6 +39,7 @@ footer {
 	justify-content: flex-end;
 	border-bottom: 2px solid gray;
 	margin-bottom: 1rem;
+	align-items: center;
 }
 #connexion a {
 	color: gray;
@@ -64,7 +68,15 @@ footer {
     flex-direction: column;
     justify-content: inherit;
 }
+
+#nameUserConnect {
+	padding: 0 10px;
+	color: #4a4a4a;
+}
+
+
 /* MAIN */
+
 #main-background {
 	background: url("../images/background/background.png") no-repeat center;
 	background-size: cover;
@@ -155,13 +167,7 @@ footer {
 		color: #49b46a;
 		font-size: 3em;
 	}
-/* FOOTER */
-#footer {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 2em;
-	border-top: #f9a825 4px solid;
-}
+
 
 /* Page Recipe */
 
@@ -193,7 +199,11 @@ footer {
 /* FOOTER */
 #footer {
 	display: flex;
+	flex-wrap: wrap;
+	padding: 2em;
+	border-top: #f9a825 4px solid;
 }
+
 #logo {
 	flex:1;
 }
@@ -230,7 +240,6 @@ footer {
 	padding-right: 9rem;
 	margin-bottom: 2rem;
 }
-
 
 /*
 	RESPONSIVE
