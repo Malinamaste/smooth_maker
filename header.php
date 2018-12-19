@@ -25,7 +25,8 @@
 		<!-- HEADER -->
 		<header id="header">
 			<section id="connexion">
-				<a href="#"><i class="fas fa-user"></i></a>
+				<a href="connexion.php" title="Connectez-vous"><i class="fas fa-user"></i></a>	
+				<a href="main.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
 			</section>
 			<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
 			<div id="wrapper">
