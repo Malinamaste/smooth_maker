@@ -1,5 +1,7 @@
 <?php 
 
+include_once "php/models/userModel.class.php";
+
     if(array_key_exists("email", $_POST)) {
 
         $errorMessage = "";
@@ -47,19 +49,19 @@
             <ul>
                 <li>
                     <label for="lastname"></label>
-                    <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Nom">
+                    <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Nom" value="<?php if(array_key_exists("lastname", $_POST)) { echo $_POST["lastname"];  }?>">
                 </li>
                 <li>
                     <label for="firstname"></label>
-                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom" >
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom" value="<?php if(array_key_exists("firstname", $_POST)) { echo $_POST["firstname"];  }?>">
                 </li>
                 <li>
                     <label for="zip"></label>
-                    <input type="text" class="form-control" name="zip" id="zip" placeholder="Code postal">
+                    <input type="text" class="form-control" name="zip" id="zip" placeholder="Code postal" value="<?php if(array_key_exists("zip", $_POST)) { echo $_POST["zip"];  }?>">
                 </li>
                 <li>
                     <label for="email"></label>
-                    <input type="email" name="email" class="form-control" id="email" placeholder="Email@">
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email@" value="<?php if(array_key_exists("email", $_POST)) { echo $_POST["email"];  }?>">
                 </li>
                 <li>
                     <label for="password"></label>

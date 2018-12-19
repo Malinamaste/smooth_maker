@@ -279,7 +279,7 @@ footer {
 	}
 	#new-user form {
 		margin-left: 3em;
-		width: 25%;
+		width: 30em;
 	}
 	#new-user h1 {
 		color: #f9a825;
@@ -422,5 +422,16 @@ footer {
 	#all-recipes {
 		display: inherit;
 	}
+
+	/* Page User */
+
+	#new-user {
+		padding: 5em 3em;
+	}
+	
+	#new-user form {
+		width: 20em;
+	}
+
 
 }
