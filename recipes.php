@@ -2,15 +2,12 @@
 
     include_once "php/models/recipeModel.class.php";
 
-<<<<<<< HEAD
     $page = "recipes";
     include_once "header.php";
 
     $recipeModel = new RecipeModel();
     $recipes = $recipeModel->getAllRecipes();
 
-=======
->>>>>>> cafbe52050910504d6d343ab31d5ead64d51ce5d
 ?>
 
 <section id="main-background">

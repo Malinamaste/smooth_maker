@@ -34,9 +34,11 @@ $user = $userSession->getFullName();
 		<!-- HEADER -->
 		<header id="header">
 			<section id="connexion">
-				<p id="nameUserConnect">Bonjour <?php echo $user ?> ! </p>
+				<?php if(!empty($user)): ?>
+					<p id="nameUserConnect">Bonjour <?php echo $user ?> ! </p>
+				<?php endif; ?>
 				<a href="connexion.php" title="Connectez-vous"><i class="fas fa-user"></i></a>	
-				<a href="logout.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
+				<a href="php/logout.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
 			</section>
 			<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
 			<div id="wrapper">
