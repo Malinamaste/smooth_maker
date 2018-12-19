@@ -46,7 +46,7 @@
 			<nav id="main-nav">
 				<ul>
 					<li>
-						<a href="concept.html">Notre concept</a>
+						<a href="concept.php">Notre concept</a>
 					</li>
 					<li>
 						<a href="recipes">Nos recettes</a>
