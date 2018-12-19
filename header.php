@@ -3,7 +3,14 @@
 include_once "php/classes/user.class.php";
 
 $userSession = new User();  
-$user = $userSession->getFullName();
+
+// if($userSession->isAuthenticated() == false){
+// 	header("Location: connexion.php");
+// 	exit();
+// }
+// else {
+// 	$user = $userSession->getFullName();
+// }
 
 ?>
 
