@@ -36,4 +36,20 @@ class CommentModel {
 
         $req->execute([$comment, $idUser, $idRecipe, $rate]);
     }
+
+    public function getAverageRate($idRecipe){
+
+        include "php/bdd.php";
+
+        $req = $bdd->prepare("
+        SELECT count(rates) AS nbRates, AVG(rates) AS averageRates
+        FROM Comments
+        WHERE idRecipe = ?
+        ");
+
+        $req->execute([$idRecipe]);
+        $averageRate = $req->fetch();
+
+        return $averageRate;
+    }
 }

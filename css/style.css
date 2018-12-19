@@ -118,7 +118,9 @@ footer {
 		font-size: 1.2em;
 	}
 	#best-sellers .fa-plus-circle {padding-left: 0.7em;}
+
 	/* RECIPES */
+
 	#recipes a, #findus a {display: flex;}
 	#recipes h3 {
 		font-size: 1.7em;
@@ -161,7 +163,7 @@ footer {
 		top: -2.8em;
 		color: #49b46a;
 		font-size: 3em;
-	}
+	}	
 
 /* RECIPES PAGE */
 
@@ -202,7 +204,12 @@ footer {
 		font-size: 1.2em;
 	}
 
-/* RECIPE PUSH */
+	#recipesCard .fa-star-half-alt {
+		color: #49b46a;
+		font-size: 1.2em;
+	}
+
+/* RECIPE PAGE */
 #ingredient img {
 	width: 50px;
 }
@@ -255,7 +262,9 @@ footer {
 #commentaires #comm {
 	padding: 0 5px;
 }
+
 /* FOOTER */
+
 #footer {
 	display: flex;
 	flex-wrap: wrap;
@@ -275,7 +284,7 @@ footer {
 	font-weight: bold;
 }
 .container img {
-	width: 45%;
+	width: 11em;
 }
 #footer h5 {
 	font-size: 0.85em;
@@ -330,14 +339,12 @@ section p {
 	RESPONSIVE
 */
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 800px) {
 
 	/* Page Recipes */
 
-	#recipesCard {
-		background: white;
-		margin: 10px 10px;
-		width: 100%;
+	#all-recipes {
+		display: inherit;
 	}
 
 }
