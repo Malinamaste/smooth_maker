@@ -26,7 +26,7 @@ footer {
 	color:#f9a825;
 }
 
-.active {
+#main-nav .active:focus {
 	color:#f9a825;
 }
 
@@ -39,7 +39,7 @@ footer {
 #header img {
 	height: 10em;
 }
-#connexion {
+#connexion-user {
 	display: flex;
     flex-basis: 100%;
 	justify-content: flex-end;
@@ -47,7 +47,7 @@ footer {
 	margin-bottom: 1rem;
 	align-items: center;
 }
-#connexion a {
+#connexion-user a {
 	color: gray;
 	margin-right: 2rem;
 }
@@ -175,7 +175,7 @@ footer {
 		font-size: 3em;
 	}	
 /* RECIPES PAGE */
-#all-recipes, .about-us {
+#all-recipes, #about-us {
 	background-color: #fff;
 	padding: 5em 7em 0 7em;
 	display: flex;
@@ -398,11 +398,9 @@ footer {
 }
 
 /* CONCEPT */
-.about-us {
-	padding: 5em 4em 0 4em;
-}
-.about-us h1 {
+#about-us h1 {
 	color: #9E171F;
+	font-family: 'Pacifico', cursive;
     font-size: 1.8em;
     border-bottom: 2px solid #49b46a;
     padding-bottom: 0.7em;
@@ -410,45 +408,26 @@ footer {
 	margin: 0 auto;
 	margin-bottom: 1rem;
 }
-.about-us span {
+#about-us  {
 	color: #49b46a;
 	font-weight: bold;
 	font-size: 2rem;
 }
-#concept {
+#hawaii, #smoothie, #smoothie-pink {
+	background-size: cover;
 	display: flex;
-	flex-wrap: wrap;
-}
-#article {
-	flex:2;
-	margin:3rem;
-}
-#smoothie {
-	flex:1;
-	margin-top: 3rem;
-}
-#concept h2 {
-	padding-bottom: 1rem;
-}
-#flex p{
-	margin-left: 7rem;
-	line-height: 1.5em;
-}
-#article p {
-	margin-right: 7rem;
-	line-height: 1.5em;
+    padding-top: 20em;
 }
 #hawaii {
-	margin-top: 3rem;
+	background: url("../images/concept/hawaii-maui-mountain-999089.jpg") no-repeat center;
+}
+#smoothie {
+	background: url("../images/concept/beach-celebrate-cheers-1058433.jpg") no-repeat center;
+}
+#smoothie-pink {
+	background: url("../images/concept/cleanise-decoration-flora-1030909.jpg") no-repeat center;
 }
 
-#flex {
-	display: flex;
-	margin: 6rem 15px;
-}
-#team {
-	margin-top: 2rem;
-}
 /*
 	RESPONSIVE
 */
