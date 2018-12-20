@@ -442,7 +442,8 @@ footer {
 }
 #hawaii, #smoothie, #smoothie-pink, #photo-team {
 	display: flex;
-	padding: 20em;
+	width: 100%;
+    height: 600px;
 }
 #hawaii {
 	background: url("../images/concept/hawaii-maui-mountain-999089.jpg") no-repeat center;
@@ -452,6 +453,7 @@ footer {
 #smoothie {
 	background: url("../images/concept/img_concept_mar.png") no-repeat center;
 	background-size: contain;
+	height: 400px;
 }
 #smoothie-pink {
 	background: url("../images/concept/cleanise-decoration-flora-1030909.jpg") no-repeat center;
@@ -532,18 +534,30 @@ footer {
 	#new-user form {
 		width: 20em;
 	}
+}
+@media screen and (max-width:1300px){
 	/* Page Concept */
 	#smoothie-pink {
 		padding:14em;
 	}
 	#hawaii, #smoothie, #photo-team {
 		display: flex;
-		padding: 6em;
 	}
-	#smooth, #about-us article:nth-child(2), #concept article {
+	#photo-team {
+		background-size: contain;
+		box-shadow: none; 
+	}
+	#smooth, #concept article {
 		display: block;
+	}
+	#about-us article:nth-child(2) {
+		display: flex;
+    	flex-direction: column-reverse;
 	}
 	#smooth p, #concept-text {
 		margin: 0 auto;
 	}
-}
+	#smoothie {
+		margin-top: 4rem;
+	}
+ }
