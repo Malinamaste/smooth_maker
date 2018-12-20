@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 20 Décembre 2018 à 15:46
+-- Généré le :  Jeu 20 Décembre 2018 à 10:51
 -- Version du serveur :  5.7.24-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.32-0ubuntu0.16.04.1
 
@@ -91,21 +91,6 @@ INSERT INTO `Comments` (`id`, `comment`, `idUser`, `idRecipe`, `rates`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Contact`
---
-
-CREATE TABLE `Contact` (
-  `id` int(5) NOT NULL,
-  `firstName` varchar(50) NOT NULL,
-  `lastName` varchar(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `zip` varchar(30) NOT NULL,
-  `city` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `Favorite`
 --
 
@@ -113,6 +98,22 @@ CREATE TABLE `Favorite` (
   `idUser` int(11) NOT NULL,
   `idRecipe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `Favorite`
+--
+
+INSERT INTO `Favorite` (`idUser`, `idRecipe`) VALUES
+(1, 7),
+(1, 2),
+(1, 3),
+(1, 2),
+(1, 5),
+(1, 1),
+(1, 2),
+(1, 2),
+(1, 2),
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -139,22 +140,22 @@ INSERT INTO `Product` (`id`, `name`, `buyPrice`, `image`, `idCategory`) VALUES
 (4, 'ananas', 2.19, 'ananas.jpg', 1),
 (5, 'grenades', 1.76, 'grenade.jpg', 1),
 (6, 'kakis', 0.65, 'kaki.jpg', 1),
-(7, 'noix de coco', 1.58, 'coco.jpg', 1),
+(7, 'noix de coco', 1.58, 'noixDeCoco.jpg', 1),
 (8, 'fraises', 0.1, 'fraise.jpg', 1),
 (9, 'framboises', 0.05, 'framboise.jpg', 1),
-(10, 'pommes vertes', 0.6, 'pomme.jpg', 1),
-(11, 'pommes rouges', 0.65, 'pomme.jpg', 1),
-(12, 'pommes jaunes', 0.45, 'pomme.jpg', 1),
+(10, 'pommes vertes', 0.6, 'pommeVerte.jpg', 1),
+(11, 'pommes rouges', 0.65, 'pommeRouge.jpg', 1),
+(12, 'pommes jaunes', 0.45, 'pommeJaune.jpg', 1),
 (13, 'gingembre', 1, 'gingembre.jpg', 3),
-(14, 'poires', 0.56, 'poire.jpg', 1),
-(15, 'feuilles de menthe', 0.64, 'menthe.jpg', 3),
-(16, 'feuilles de basilic', 0.4, 'basilic.jpg', 3),
-(17, 'cl de lait de coco', 0.25, 'coco.jpg', 4),
+(14, 'poire', 0.56, 'poire.jpg', 1),
+(15, 'menthe', 0.64, 'menthe.jpg', 3),
+(16, 'basilic', 0.4, 'basilic.jpg', 3),
+(17, 'lait de coco', 0.25, 'laitCoco.jpg', 4),
 (18, 'citrons verts', 0.8, 'citronVert.jpg', 1),
 (19, 'mangues', 1.4, 'mange.jpg', 1),
-(20, 'concombres', 0.8, 'concombre.jpg', 2),
-(21, 'oranges sanguines', 0.45, 'orangeSanguine.jpg', 1),
-(22, 'ml de jus de carottes', 2.4, 'carotte.jpg', 5);
+(20, 'concombre', 0.8, 'concombre.jpg', 2),
+(21, 'oranges sanguines', 0.45, 'orangeSanguine', 1),
+(22, 'jus de carottes', 2.4, 'jusCarotte', 5);
 
 -- --------------------------------------------------------
 
@@ -177,14 +178,14 @@ CREATE TABLE `Recipe` (
 --
 
 INSERT INTO `Recipe` (`id`, `name`, `description`, `salePrice`, `ingredientsNumber`, `image`, `imageBest`) VALUES
-(1, 'Yello Wai', 'Délicieux mélange d\'ananas, de bananes et de citron vert pour ensoleiller vos papilles...', 5, 3, 'recette1.jpg', 'best1.png'),
-(2, 'Pink Wai', 'Un doux parfum d\'enfance 100% naturel : banane, fraises et pomme', 5.5, 3, 'recette2.jpg', 'best2.png'),
-(3, 'Detox Wai', 'Faites du bien à votre corps tout en vous régalant... fraises, framboises, kiwi, menthe et basilic se mélangent joyeusement.', 6.3, 5, 'recette3.jpg', 'best3.png'),
-(4, 'L\'Onctueux Wai', 'Les îles s\'invitent dans ce smoothie , banane, kiwi et fruit de la passion pour un voyage au soleil.', 6.5, 3, 'recette4.jpg', 'best4.png'),
-(5, 'Pina Wai', 'L\'exotisme est au rendez-vous dans ce smoothie composé de lait de coco, ananas et mangue.', 5.2, 3, 'recette5.jpg', 'best5.png'),
-(6, 'Fresh Wai', 'Très rafraîchissant mélange de pommes, citron vert et banane.', 4.8, 3, 'recette6.jpg', 'best6.png'),
-(7, 'Red Wai', 'Composé de mangue, d\'orange sanguine fraîche et de jus de carotte, ce Smoothie va glacer vos soirées d\'Halloween.', 5.2, 3, 'recette7.jpg', 'best7.png'),
-(8, 'Green Wai', 'Boisson onctueuse mixée à base de concombre et de kiwi et parfumée à la menthe.', 4.8, 3, 'recette8.jpg', 'best8.pnn');
+(1, 'Yello Wai', 'Délicieux mélange d\'ananas, de bananes et de citron vert pour ensoleiller vos papilles...', 5, 3, 'recette-d28983-smoothie-ananas-banane-et-citron-vert.jpg', 'best1.png'),
+(2, 'Pink Wai', 'Un doux parfum d\'enfance 100% naturel : banane, fraises et pomme', 5.5, 3, 'recette-d23386-smoothie-banane-fraise-et-pomme.jpg', 'best2.png'),
+(3, 'Detox Wai', 'Faites du bien à votre corps tout en vous régalant... fraises, framboises, kiwi, menthe et basilic se mélangent joyeusement.', 6.3, 5, 'recette-d17006-smoothie-detox-fraise-framboise-au-the.jpg', 'best3.png'),
+(4, 'L\'Onctueux Wai', 'Les îles s\'invitent dans ce smoothie , banane, kiwi et fruit de la passion pour un voyage au soleil.', 6.5, 3, 'recette-d23000-smoothie-banane-kiwi-et-fruits-de-la-passion.jpg', 'best4.png'),
+(5, 'Pina Wai', 'L\'exotisme est au rendez-vous dans ce smoothie composé de lait de coco, ananas et mangue.', 5.2, 3, 'recette-d23155-smoothie-mangue-facon-pina-colada (1).jpg', 'best5.png'),
+(6, 'Fresh Wai', 'Très rafraîchissant mélange de pommes, citron vert et banane.', 4.8, 3, 'recette-d7800-smoothie-pomme-citron-vert-banane.jpg', 'best6.png'),
+(7, 'Red Wai', 'Composé de mangue, d\'orange sanguine fraîche et de jus de carotte, ce Smoothie va glacer vos soirées d\'Halloween.', 5.2, 3, 'recette-d6770-smoothie-mangue-carotte-et-orange-sanguine.jpg', 'best7.png'),
+(8, 'Green Wai', 'Boisson onctueuse mixée à base de concombre et de kiwi et parfumée à la menthe.', 4.8, 3, 'recette-d6491-smoothie-de-concombre-aux-kiwis.jpg', 'best8.pnn');
 
 -- --------------------------------------------------------
 
@@ -300,12 +301,6 @@ ALTER TABLE `Comments`
   ADD KEY `idReciepe` (`idRecipe`);
 
 --
--- Index pour la table `Contact`
---
-ALTER TABLE `Contact`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Index pour la table `Favorite`
 --
 ALTER TABLE `Favorite`
@@ -363,11 +358,6 @@ ALTER TABLE `Category`
 ALTER TABLE `Comments`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
--- AUTO_INCREMENT pour la table `Contact`
---
-ALTER TABLE `Contact`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT pour la table `Product`
 --
 ALTER TABLE `Product`
@@ -391,7 +381,7 @@ ALTER TABLE `Unit`
 -- AUTO_INCREMENT pour la table `User`
 --
 ALTER TABLE `User`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- Contraintes pour les tables exportées
 --

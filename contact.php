@@ -3,6 +3,12 @@
     $page = "contact";
     include_once "header.php";
 
+    include_once "php/models/contactModel.class.php";
+
+
+    $contactModel = new ContactModel();
+    $contactModel->createContact();
+
 ?>
 
 <section id="main-background">

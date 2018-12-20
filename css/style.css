@@ -9,6 +9,12 @@ h2, h3 {
 footer {
 	color: #000;
 }
+/* Etoiles Note */
+.fa-star-half-alt, .fa-star {
+	color: #49b46a;
+	font-size: 1.2em;
+}
+
 .flex {display: flex;}
 /* HEADER */
 #header {
@@ -128,13 +134,21 @@ footer {
 		color: #49b46a;
 		font-size: 1.2em;
 	}
-	#best-sellers .fa-plus-circle {padding-left: 0.7em;}
+	#best-sellers .fa-plus-circle {
+		padding-left: 0.7em;
+	}
 
 	/* RECIPES */
-	#recipes a, #findus a {display: flex;}
+	#recipes a, #findus a {
+		display: flex;
+	}
 	#recipes h3 {
 		font-size: 1.7em;
 		padding: 0.8em 0.8em;
+	}
+	#recipes a {
+		justify-content: center;
+    	align-items: center;
 	}
 	#recipes a p:hover, #findus a p:hover{
 		color: #ababab;
@@ -154,6 +168,9 @@ footer {
     	padding-left: 5em;
     	text-align: left;
     	justify-content: flex-start;
+	}
+	#recipes img {
+		height: 350px;
 	}
 	/* FIND US */
 	#findus h3 {
@@ -581,9 +598,13 @@ footer {
 	RESPONSIVE
 */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 
 	/* Page Main */
+
+	#recipes a {
+		display: inherit;
+	}
 
 	/* Page Recipes */
 
