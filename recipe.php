@@ -43,8 +43,8 @@
     <section id="recipeSection">
         <ul id="fav">
             <li>
-                    <?php if(empty($favorite)): ?> <a id="addFavorite" href="#"><i class="fas fa-heart"></i> Ajouter aux favoris</a>
-                    <?php else: ?> <a id="removeFavorite" href="#"><i class="fas fa-heart-broken"></i> Retirer des favoris</a>
+                    <?php if(empty($favorite)): ?> <a id="addFavorite" href="#"><p> Ajouter aux favoris <i class="fas fa-heart"></i> </p></a>
+                    <?php else: ?> <a id="removeFavorite" href="#"> <p> Retirer des favoris <i class="fas fa-heart-broken"></i></p></a>
                     <?php endif; ?>
             </li>
         </ul>

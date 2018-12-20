@@ -274,12 +274,19 @@ footer {
 		right: 4em;
     	top: -0.8em;
 	}
+	/* FAVORIS */
 	#fav {
 		text-align: right;
 	}
+	#addFavorite i, #removeFavorite i {
+		color:#f9a825;
+		font-size: 25px;
+	}
+	#addFavorite p, #removeFavorite p {
+		color: #32c147;
+	}
 
 	
-
 	/* COMMENTAIRES */
 	#commName span, form legend {
 		font-weight: bold;
@@ -502,6 +509,13 @@ footer {
 */
 
 @media screen and (max-width: 800px) {
+
+	/* Page Main */
+	#recipes img  {
+		width:50%;
+	}
+
+
 
 	/* Page Recipes */
 
