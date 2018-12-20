@@ -155,8 +155,8 @@ footer {
 		color: #ababab;
 	}
 	#recipes .fa-plus-circle {
-		position: relative;
-    	left: 16.5em;
+		/*position: relative;
+    	left: 16.5em;*/
 		color: #49b46a;
 		font-size: 3em;
 	}
@@ -184,12 +184,12 @@ footer {
 	#findus p, .wrap {flex: 1;}
 	#findus p {
 		text-align: left;
-    	padding-top: 6em;
+		padding-top: 2.5em;
 	}
 	#findus .fa-plus-circle {
-		position: relative;
+		/*position: relative;
 		left: 6.6em;
-		top: -2.8em;
+		top: -2.8em;*/
 		color: #49b46a;
 		font-size: 3em;
 	}	
@@ -618,7 +618,7 @@ footer {
 
 	/* Page Main */
 
-	#recipes a {
+	#recipes a, #findus a {
 		display: inherit;
 	}
 
