@@ -72,9 +72,9 @@ footer {
 #social ul li {
 	border: 1px solid #f9a825;
     border-radius: 100%;
-	padding: 10px;
-	height: 50px;
-	width: 50px;
+    padding: 13px 8px;
+    height: 55px;
+    width: 55px;
 }
 #social ul li:nth-child(2) {
 	margin:0 1em;
@@ -252,6 +252,7 @@ footer {
 	#recipeArticle #description {
 		font-size: 1.3em;
 		color: #32c147;
+		margin: 0 22px;
 	}
 	#ingredient img {
 		max-width: 50px;
@@ -277,7 +278,7 @@ footer {
 		font-size:45px;
 		color:#f9a825;
 		position: relative;
-		right: 4em;
+		right: 5.3em;
     	top: -0.8em;
 	}
 	/* FAVORIS */
