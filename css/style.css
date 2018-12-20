@@ -156,7 +156,7 @@ footer {
 	}
 	#recipes .fa-plus-circle {
 		position: relative;
-    	left: 16.5em;
+		left: 25em;
 		color: #49b46a;
 		font-size: 3em;
 	}
@@ -223,10 +223,10 @@ footer {
 	}
 	#recipesCard img {max-width: 50%;}
 	#recipesCard .fa-plus-circle {
-		font-size: 3em;
-		position: relative;
-		left: -0.5em;
-		top: 0.6em;
+		    position: relative;
+    	left: 25em;
+    	color: #49b46a;
+    	font-size: 3em;
 	}
 	#recipesCard .fa-star {
 		padding-right: 0.3em;
