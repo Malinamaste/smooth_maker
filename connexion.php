@@ -1,67 +1,74 @@
 <?php 
 
-$page = "connexion";
-include_once "header.php";
+    $page = "connexion";
+    include_once "header.php";
 
-if(array_key_exists("email", $_POST)) {
+    if(array_key_exists("email", $_POST)) {
 
-    $errorMessage = "";
+        $errorMessage = "";
     
-    try
-    {
-        $email = $_POST["email"];
-        $password = $_POST["password"];
+        try
+        {
+            $email = $_POST["email"];
+            $password = $_POST["password"];
 
-        $userModel = new UserModel();
-        $user = $userModel->getUser($email, $password);
+            $userModel = new UserModel();
+            $user = $userModel->getUser($email, $password);
 
-        $userSession = new User();  
-        $userSession->create($user["id"], $user["firstName"] , $user["lastName"], $user["email"]);
+            $userSession = new User();  
+            $userSession->create($user["id"], $user["firstName"] , $user["lastName"], $user["email"]);
         
-        header("Location: main.php");
-        exit();
+            header("Location: main.php");
+            exit();
 
-    }
-    catch(DomainException $exception) {
+        }
+        catch(DomainException $exception) {
 
-        $errorMessage = $exception->getMessage();
+            $errorMessage = $exception->getMessage();
+        }
     }
-}
 
 ?>
 
 <section id="main-background">
-    <form method="POST" action="connexion.php" class="form-signin">
-        <h1>Connexion</h1>
+    <article id="user-co">
+        <h1><i class="fas fa-sign-in-alt"></i>Connexion</h1>
 
-        <!-- Message d'alerte si l'adresse mail ou le mot de passe ne sont pas bons -->   
-        <?php if(!empty($errorMessage)): ?>
-            <p class="alert alert-danger" role="alert" > 
-                <?php echo $errorMessage; ?> 
-            </p>
-        <?php endif; ?>
+        <form method="POST" action="connexion.php" class="form-signin">
+            <h2>Entrez vos identifiants</h2>
 
-        <div class="form-group">
-            <label for="email"></label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="Votre adresse email" value="<?php if(array_key_exists("email", $_POST)) { echo $_POST["email"];  }?>">
-        </div>
-        <div class="form-group">
-            <label for="password"></label>
-            <input type="password" name="password" class="form-control" id="password" placeholder="Votre mot de passe" >
-        </div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="remember" name="remember">
-            <label class="form-check-label" for="remember">Se souvenir de moi</label>
-        </div>
-        <div>
-            <button id="connexion" class="btn btn-primary">Se connecter</button>
-            <a id="inscrire" class="btn btn-primary" href="user.php">S'inscrire</a>
-        </div>
-    </form>
+            <!-- Message d'alerte si l'adresse mail ou le mot de passe ne sont pas bons -->   
+            <?php if(!empty($errorMessage)): ?>
+                <p class="alert alert-danger" role="alert" > 
+                    <?php echo $errorMessage; ?> 
+                </p>
+            <?php endif; ?>
+
+            <ul>
+                <li>
+                    <label for="email"></label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Votre adresse email" value="<?php if(array_key_exists("email", $_POST)) { echo $_POST["email"];  }?>">
+                </li>
+                <li>
+                    <label for="password"></label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Votre mot de passe" >
+                </li>
+                <li>
+                    <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                    <label class="form-check-label" for="remember">Se souvenir de moi</label>
+                </li>
+                <li class="last">
+                    <button id="connexion" class="btn btn-primary">Se connecter</button>
+                    <a id="inscrire" class="btn btn-primary" href="user.php">S'inscrire</a>
+                </li>
+            </ul>
+                
+        </form>
+    </article>
 <section>
 
 <?php
 
-include_once "footer.php";
+    include_once "footer.php";
 
 ?>
