@@ -1,7 +1,5 @@
 <?php
 
-include_once "php/models/userModel.class.php";
-
 class User {
 
     public function __construct() {

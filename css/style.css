@@ -9,6 +9,15 @@ h2, h3 {
 footer {
 	color: #000;
 }
+	/* Etoiles Note */
+.fa-star-half-alt, .fa-star {
+	color: #49b46a;
+	font-size: 1.2em;
+}
+.hide {
+	display:none;
+}
+
 /* HEADER */
 #header {
 	display: flex;
@@ -98,7 +107,7 @@ footer {
 	#slider ol li:nth-child(2) {margin: 0 1em;}
 	/* BEST-SELLERS */
 	#best-sellers, #recipes, #findus {
-		background-color: rgba(255,255,255, 0.8);
+		background-color: rgba(255,255,255, 0.9);
     	text-align: center;
     	padding: 2em 1em;
     	margin-top: 1.5em;
@@ -125,10 +134,6 @@ footer {
 	}
 	#best-sellers .fa-plus-circle {padding-left: 0.7em;}
 
-	#best-sellers .fa-star-half-alt, #best-sellers .fa-star {
-		color: #49b46a;
-		font-size: 1.2em;
-	}
 	/* RECIPES */
 	#recipes a, #findus a {display: flex;}
 	#recipes h3 {
@@ -193,7 +198,10 @@ footer {
     	font-size: 1.7em;
 		padding-bottom: 1em;
 	}
-	#recipesCard p, #recipesCard .fa-plus-circle, #recipesCard .fa-star {color: #49b46a;}
+	#recipesCard p, #recipesCard .fa-plus-circle, #recipesCard  {
+		color: #49b46a;
+	}
+
 	#recipesCard p {
 		padding-top: 1em;
 		font-weight: bold;
@@ -211,13 +219,10 @@ footer {
 		padding-top: 0.8em;
 		font-size: 1.2em;
 	}
-	#recipesCard .fa-star-half-alt {
-		color: #49b46a;
-		font-size: 1.2em;
-	}
+
 /* RECIPE PAGE */
 #recipeSection {
-	background-color: rgba(255,255,255, 0.8);
+	background-color: rgba(255,255,255, 0.9);
 	padding: 3em 5em;
 	display: flex;
     flex-direction: column;
@@ -238,10 +243,7 @@ footer {
 		flex: 1;
 		justify-content: space-evenly;
 	}
-	/* #recipeArticle li {
-		padding: 5px;
-	} */
-	#recipeArticle p {
+	#recipeArticle #description {
 		font-size: 1.3em;
 		color: #32c147;
 	}
@@ -254,13 +256,36 @@ footer {
 		font-size: 1.8em;
 		margin-left: 1em;
 	}
-	#recipePicture img {max-width: 30em;}
+	/* RECIPE PICTURE */
+	#recipePicture {
+		text-align: center;
+	}
+	#recipePicture img {
+		max-width: 30em;
+	}
+	li.vote p {
+		color:#f9a825;
+		font-size: 15px;
+	}
+	#recipePicture .fa-heart {
+		font-size:45px;
+		color:#f9a825;
+		position: relative;
+		right: 4em;
+    	top: -0.8em;
+	}
+	#fav {
+		text-align: right;
+	}
+
+	
+
 	/* COMMENTAIRES */
 	#commName span, form legend {
 		font-weight: bold;
 	}
 	#commentaires {
-		background: rgba(255, 255, 255, 0.8);
+		background: rgba(255, 255, 255, 0.9);
 		padding: 2em;
 		margin-top: 2em;
 	}
@@ -271,7 +296,6 @@ footer {
 		background: #32c147;
 	}
 	#commentaires .fa-star {
-		color: #32c147;
 		font-size: 25px;
 	}
 	#commentaires .fa-comment-dots, #commentaires .fa-comments {
@@ -295,7 +319,7 @@ footer {
 	}
 /* USER PAGE */
 #new-user {
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.9);
 	padding: 5em 7em;
 }
 	/* FORMULAIRE */

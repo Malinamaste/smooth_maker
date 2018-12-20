@@ -1,6 +1,10 @@
 <?php
 
 include_once "php/classes/user.class.php";
+include_once "php/models/userModel.class.php";
+include_once "php/models/recipeModel.class.php";
+include_once "php/models/commentModel.class.php";
+include_once "php/models/favoriteModel.class.php";
 
 $userSession = new User();  
 $user = $userSession->getFullName();
