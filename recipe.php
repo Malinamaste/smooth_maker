@@ -1,10 +1,7 @@
 <?php
 
-    include_once "php/classes/user.class.php";
-    include_once "php/models/recipeModel.class.php";
-    include_once "php/models/commentModel.class.php";
     include_once "header.php";
-
+    
     $idRecipe = $_GET["id"];
 
     // Récupère la recette
@@ -18,35 +15,39 @@
     $commentModel = new CommentModel();
     $comments = $commentModel->getComments($idRecipe);
 
+    $userSession = new User();
+
     if(array_key_exists("commentaire", $_POST)) {
 
-<<<<<<< HEAD
-        /*if($userSession->isAuthenticated() == false){
+        if($userSession->isAuthenticated() == false){
             header("Location: connexion.php");
             exit();
-        }*/
-=======
-    if($userSession->isAuthenticated() == false){
-        header("Location: connexion.php");
-        exit();
-    }
->>>>>>> 7ee872721841b904c99e8ca9de295bca886ec7d1
-
-        $userSession = new User();  
+        }
+        
         $userId = $userSession->getUserId();
 
-        $commentModel = new CommentModel();  
         $commentModel->createComment($idRecipe, $userId);
 
         $comments = $commentModel->getComments($idRecipe);
-    
     }
+
+    // Afficher favoris ou non
+    $userId = $userSession->getUserId();
+    $favoriteModel = new FavoriteModel();
+    $favorite = $favoriteModel->getFavorite($userId, $idRecipe);
 
 ?>
 
 <section id="main-background">
 
     <section id="recipeSection">
+        <ul id="fav">
+            <li>
+                    <?php if(empty($favorite)): ?> <a id="addFavorite" href="#"><p> Ajouter aux favoris <i class="fas fa-heart"></i> </p></a>
+                    <?php else: ?> <a id="removeFavorite" href="#"> <p> Retirer des favoris <i class="fas fa-heart-broken"></i></p></a>
+                    <?php endif; ?>
+            </li>
+        </ul>
         <h2><?php echo $recipe["name"] ?></h2>
         <article id="recipeArticle">
             <ul> 
@@ -56,14 +57,70 @@
                     <span><?php echo $ingredient["quantityProduct"] . " ". $ingredient["productName"] ?></span>
                 </li>
                 <?php endforeach; ?>
-                <li>
+                <li id="description">
                     <p><?php echo $recipe["description"] ?><p>
                 </li>
             </ul>
-
             <ul id="recipePicture">
                 <li>
                     <img src="images/Recipes/<?php echo $recipe["image"] ?>">
+                </li>
+                <li>
+                    <p>
+                        <?php if(empty($favorite)): ?> <i id="heartFav" class="far fa-heart"></i>
+                        <?php else: ?> <i id="heartNoFav" class="fas fa-heart"></i>
+                        <?php endif; ?>
+                    </p>
+                </li>
+
+                <!-- Etoiles : notes moyennes de chaque recette -->
+                <?php $averageRate = $commentModel->getAverageRate($recipe["id"]); 
+                    
+                    $rate = $averageRate["averageRates"]; 
+                    $rateNb = substr($rate, 0, 1);
+                    $rateDecimal = substr($rate, 2, 1);
+                ?>
+                <li class="vote">
+                    <p>
+                        <?php 
+                            if($rateDecimal > 0)
+                                echo $rateNb.",".$rateDecimal."/5";
+                            else {
+                                echo $rateNb."/5";
+                            }
+                            
+                        ?>
+                    </p>
+                </li>
+                <li>
+                    <?php    
+                        if($rateDecimal > 0)
+                            $rateNone = 5-$rateNb-1;
+                        else {
+                            $rateNone = 5-$rateNb;
+                        }
+
+                        for($i = 1; $i <= $rateNb; $i++): ?>
+                            <i class="fas fa-star"></i>
+                        <?php endfor;
+
+                        if($rateDecimal >= 5):  ?>
+                            <i class="fas fa-star-half-alt"></i>
+                        <?php endif;
+
+                        for($i = 1; $i <= $rateNone; $i++): ?>
+                            <i class="far fa-star"></i>
+                    <?php endfor; ?>
+                </li>
+                <li class="vote">
+                    <p><?php echo $averageRate["nbRates"] ?> 
+
+                    <!-- Nb votes : rajout du 's' si plusieurs votes -->
+                        <?php if($averageRate["nbRates"] > 1) : ?> 
+                        votes
+                        <?php else: ?> 
+                        vote
+                        <?php endif;?>
                 </li>
             <ul>
         </article>

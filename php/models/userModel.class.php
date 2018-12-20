@@ -25,21 +25,25 @@ class UserModel {
             throw new DomainException("L'adresse mail existe déjà");
         }
 
-        $req = $bdd->prepare("INSERT INTO User
-        (
-            lastName,
-            firstName,
-            email,
-            password,
-            zip
-        ) VALUES (?, ?, ?, ?, ?)");
-        
+        if(!empty($email) && !empty($firstName) && !empty($lastName) && !empty($password)) {
 
-        $hashPassword = $this->hashPassword($password);
+            $req = $bdd->prepare("INSERT INTO User
+            (
+                lastName,
+                firstName,
+                email,
+                password,
+                zip
+            ) VALUES (?, ?, ?, ?, ?)");
+            
 
-        
-        // Insertion de l'utilisateur dans la base de données.
-        $req->execute(array($lastName, $firstName,$email,$hashPassword,$zip));
+            $hashPassword = $this->hashPassword($password);
+            
+            // Insertion de l'utilisateur dans la base de données.
+            $req->execute(array($lastName, $firstName,$email,$hashPassword,$zip));
+        } else {
+            throw new DomainException("Merci de renseigner tous les champs");
+        }
     }
 
     private function hashPassword($password) {

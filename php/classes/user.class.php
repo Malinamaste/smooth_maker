@@ -1,7 +1,5 @@
 <?php
 
-include_once "php/models/userModel.class.php";
-
 class User {
 
     public function __construct() {
@@ -34,7 +32,9 @@ class User {
     }
 
     public function getUserId(){
-    	return $_SESSION['user']['UserId'];
+        if($this->isAuthenticated()) {
+            return $_SESSION['user']['UserId'];
+        }
     }
 
     public function getFullName() {

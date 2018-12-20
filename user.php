@@ -2,10 +2,10 @@
 
 include_once "php/models/userModel.class.php";
 
+
     if(array_key_exists("email", $_POST)) {
 
         $errorMessage = "";
-
         try
         {
             $email = $_POST["email"];
@@ -14,9 +14,10 @@ include_once "php/models/userModel.class.php";
             $zip = $_POST["zip"];
             $password = $_POST["password"];
 
+            
             $userModel = new UserModel();
             $userModel->create($firstName, $lastName, $email, $password, $zip);
-
+        
             header("Location: main.php");
             exit();
 

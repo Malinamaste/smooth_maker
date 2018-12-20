@@ -85,6 +85,12 @@ footer {
 	padding: 2em;
 }
 	/* SLIDER */
+	.carousel-item img {
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		object-position: 0 17%;
+	}
 	#slider ol {
 		margin-bottom: 1em;
 	}
@@ -124,10 +130,6 @@ footer {
 	}
 	#best-sellers .fa-plus-circle {padding-left: 0.7em;}
 
-	#best-sellers .fa-star-half-alt, #best-sellers .fa-star {
-		color: #49b46a;
-		font-size: 1.2em;
-	}
 	/* RECIPES */
 	#recipes a, #findus a {display: flex;}
 	#recipes h3 {
@@ -174,7 +176,7 @@ footer {
 		font-size: 3em;
 	}	
 /* RECIPES PAGE */
-#all-recipes, #about-us {
+#all-recipes {
 	background-color: #fff;
 	padding: 5em 7em 0 7em;
 	display: flex;
@@ -192,7 +194,10 @@ footer {
     	font-size: 1.7em;
 		padding-bottom: 1em;
 	}
-	#recipesCard p, #recipesCard .fa-plus-circle, #recipesCard .fa-star {color: #49b46a;}
+	#recipesCard p, #recipesCard .fa-plus-circle, #recipesCard  {
+		color: #49b46a;
+	}
+
 	#recipesCard p {
 		padding-top: 1em;
 		font-weight: bold;
@@ -210,13 +215,10 @@ footer {
 		padding-top: 0.8em;
 		font-size: 1.2em;
 	}
-	#recipesCard .fa-star-half-alt {
-		color: #49b46a;
-		font-size: 1.2em;
-	}
+
 /* RECIPE PAGE */
 #recipeSection {
-	background-color: rgba(255,255,255, 0.8);
+	background-color: rgba(255,255,255, 0.9);
 	padding: 3em 5em;
 	display: flex;
     flex-direction: column;
@@ -237,7 +239,7 @@ footer {
 		flex: 1;
 		justify-content: space-evenly;
 	}
-	#recipeArticle p {
+	#recipeArticle #description {
 		font-size: 1.3em;
 		color: #32c147;
 	}
@@ -250,13 +252,43 @@ footer {
 		font-size: 1.8em;
 		margin-left: 1em;
 	}
-	#recipePicture img {max-width: 30em;}
+	/* RECIPE PICTURE */
+	#recipePicture {
+		text-align: center;
+	}
+	#recipePicture img {
+		max-width: 30em;
+	}
+	li.vote p {
+		color:#f9a825;
+		font-size: 15px;
+	}
+	#recipePicture .fa-heart {
+		font-size:45px;
+		color:#f9a825;
+		position: relative;
+		right: 4em;
+    	top: -0.8em;
+	}
+	/* FAVORIS */
+	#fav {
+		text-align: right;
+	}
+	#addFavorite i, #removeFavorite i {
+		color:#f9a825;
+		font-size: 25px;
+	}
+	#addFavorite p, #removeFavorite p {
+		color: #32c147;
+	}
+
+	
 	/* COMMENTAIRES */
 	#commName span, form legend {
 		font-weight: bold;
 	}
 	#commentaires {
-		background: rgba(255, 255, 255, 0.8);
+		background: rgba(255, 255, 255, 0.9);
 		padding: 2em;
 		margin-top: 2em;
 	}
@@ -267,7 +299,6 @@ footer {
 		background: #32c147;
 	}
 	#commentaires .fa-star {
-		color: #32c147;
 		font-size: 25px;
 	}
 	#commentaires .fa-comment-dots, #commentaires .fa-comments {
@@ -290,8 +321,8 @@ footer {
 		padding: 0 5px;
 	}
 /* USER PAGE */
-#new-user, #user-co {
-	background: rgba(255, 255, 255, 0.8);
+#new-user {
+	background: rgba(255, 255, 255, 0.9);
 	padding: 5em 7em;
 }
 	/* FORMULAIRE */
@@ -469,40 +500,89 @@ footer {
 
 
 /* CONCEPT */
-#about-us h1 {
+#about-us, #concept, #team {
+	background-color: #fff;
+	padding: 5em 7em 0 7em;
+}
+#about-us h1, #about-us h2, #concept h2, #team h2 {
 	color: #9E171F;
 	font-family: 'Pacifico', cursive;
     font-size: 1.8em;
     border-bottom: 2px solid #49b46a;
     padding-bottom: 0.7em;
-    width: 90%;
-	margin: 0 auto;
 	margin-bottom: 1rem;
 }
-#about-us  {
-	color: #49b46a;
-	font-weight: bold;
-	font-size: 2rem;
-}
-#hawaii, #smoothie, #smoothie-pink {
-	background-size: cover;
+#hawaii, #smoothie, #smoothie-pink, #photo-team {
 	display: flex;
-    padding-top: 20em;
+	padding: 20em;
 }
 #hawaii {
 	background: url("../images/concept/hawaii-maui-mountain-999089.jpg") no-repeat center;
+	background-size: cover;
+	box-shadow: 16px 16px 7px #e4e8ec;
 }
 #smoothie {
-	background: url("../images/concept/beach-celebrate-cheers-1058433.jpg") no-repeat center;
+	background: url("../images/concept/img_concept_mar.png") no-repeat center;
+	background-size: contain;
 }
 #smoothie-pink {
 	background: url("../images/concept/cleanise-decoration-flora-1030909.jpg") no-repeat center;
+	background-size: cover;
+	box-shadow: 16px 16px 7px #e4e8ec;
+	margin-top: 3rem;
+}
+#photo-team {
+	background: url("../images/concept/IMG_20181219_133835.jpg") no-repeat;
+	background-size: cover;
+	box-shadow: 16px 16px 7px #e4e8ec;
+}
+#about-us article:nth-child(2) {
+	display: flex;
+	margin-top: 5rem;
+}
+#smooth p {
+	padding-top: 8rem;
+    margin: 0 8rem;
+    line-height: 2.2;
+}
+#about-us .green, #team .green {
+	color: #49b46a;
+	font-weight: bold;
+	font-size: 2rem;
+	margin: 2rem 0;
+}
+#concept article p {
+	line-height: 2.2;
+	margin-bottom: 12rem;
+}
+#concept h3 {
+	margin: 2rem 0;
+    color: #464646;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+#concept article {
+	display: flex;
+	flex:1;
+}
+#concept-text {
+	margin-right: 10rem;
+}
+#concept-text h3:first-child {
+	margin-top: 4rem;
+}
+
+#team {
+	padding-bottom: 5rem;
 }
 /*
 	RESPONSIVE
 */
 
 @media screen and (max-width: 800px) {
+
+	/* Page Main */
 
 	/* Page Recipes */
 
@@ -518,5 +598,19 @@ footer {
 
 	#new-user form {
 		width: 20em;
+	}
+	/* Page Concept */
+	#smoothie-pink {
+		padding:14em;
+	}
+	#hawaii, #smoothie, #photo-team {
+		display: flex;
+		padding: 6em;
+	}
+	#smooth, #about-us article:nth-child(2), #concept article {
+		display: block;
+	}
+	#smooth p, #concept-text {
+		margin: 0 auto;
 	}
 }

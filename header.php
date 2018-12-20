@@ -1,6 +1,10 @@
 <?php
 
 include_once "php/classes/user.class.php";
+include_once "php/models/userModel.class.php";
+include_once "php/models/recipeModel.class.php";
+include_once "php/models/commentModel.class.php";
+include_once "php/models/favoriteModel.class.php";
 
 $userSession = new User();  
 $user = $userSession->getFullName();
@@ -40,7 +44,7 @@ $user = $userSession->getFullName();
 				<?php endif; ?>
 
 				<a href="connexion.php" title="Connectez-vous"><i class="fas fa-user"></i></a>	
-				<a href="php/logout.php" title="Déconnexion"><i class="fas fa-user-times"></i></a>
+<?php if(!empty($user)): ?> <a href="php/logout.php" title="Déconnexion"><i class="fas fa-user-times"></i></a><?php endif; ?>
 			</section>
 			<a href="main.php"><img src="images/logo.png" alt="Logo de Wai Smoothies"><br/>Jus de fruit 100% BIO</a>
 			<div id="wrapper">
