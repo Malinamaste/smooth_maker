@@ -175,7 +175,7 @@ footer {
 		font-size: 3em;
 	}	
 /* RECIPES PAGE */
-#all-recipes, #about-us {
+#all-recipes {
 	background-color: #fff;
 	padding: 5em 7em 0 7em;
 	display: flex;
@@ -394,34 +394,76 @@ footer {
 	padding: 0 10px 0 0;
 }
 /* CONCEPT */
-#about-us h1 {
+#about-us, #concept, #team {
+	background-color: #fff;
+	padding: 5em 7em 0 7em;
+}
+#about-us h1, h2 {
 	color: #9E171F;
 	font-family: 'Pacifico', cursive;
     font-size: 1.8em;
     border-bottom: 2px solid #49b46a;
     padding-bottom: 0.7em;
-    width: 90%;
-	margin: 0 auto;
 	margin-bottom: 1rem;
 }
-#about-us  {
-	color: #49b46a;
-	font-weight: bold;
-	font-size: 2rem;
-}
-#hawaii, #smoothie, #smoothie-pink {
-	background-size: cover;
+#hawaii, #smoothie, #smoothie-pink, #photo-team {
 	display: flex;
-    padding-top: 20em;
+	padding: 20em;
 }
 #hawaii {
 	background: url("../images/concept/hawaii-maui-mountain-999089.jpg") no-repeat center;
+	background-size: cover;
+	box-shadow: 16px 20px 7px #bbbfc3;
 }
 #smoothie {
-	background: url("../images/concept/beach-celebrate-cheers-1058433.jpg") no-repeat center;
+	background: url("../images/concept/img_concept_mar.png") no-repeat center;
+	background-size: contain;
 }
 #smoothie-pink {
 	background: url("../images/concept/cleanise-decoration-flora-1030909.jpg") no-repeat center;
+	background-size: cover;
+	box-shadow: 16px 20px 7px #bbbfc3;
+	margin-top: 3rem;
+}
+#photo-team {
+	background: url("../images/concept/IMG_20181219_133835.jpg") no-repeat center;
+	background-size: cover;
+	box-shadow: 16px 20px 7px #bbbfc3;
+}
+#about-us article:nth-child(2) {
+	display: flex;
+	margin-top: 5rem;
+}
+#smooth p {
+	padding-top: 8rem;
+    margin: 0 8rem;
+    line-height: 2.2;
+}
+#about-us .green, #team .green {
+	color: #49b46a;
+	font-weight: bold;
+	font-size: 2rem;
+	margin: 2rem 0;
+}
+#concept article p {
+	line-height: 2.2;
+}
+#concept h3 {
+	margin: 2rem 0;
+    color: #464646;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: x-large;
+}
+#concept article {
+	display: flex;
+	flex:1;
+}
+#concept-text {
+	margin-right: 10rem;
+}
+#team {
+	padding-bottom: 5rem;
 }
 /*
 	RESPONSIVE
