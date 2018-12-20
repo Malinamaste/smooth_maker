@@ -505,6 +505,13 @@ footer {
 
 @media screen and (max-width: 800px) {
 
+	/* Page Main */
+	#recipes img  {
+		width:50%;
+	}
+
+
+
 	/* Page Recipes */
 
 	#all-recipes {
