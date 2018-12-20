@@ -2,6 +2,8 @@ $(document).ready(function(){
 
     $("#addFavorite").on("click", addFavorite);
     $("#removeFavorite").on("click", removeFavorite);
+
+    //$("#save").on("click", removeFavorite);
 });
 
 function addFavorite(idRecipe) {
@@ -41,3 +43,16 @@ function removeFavorite(idRecipe) {
             }
         });  
 }
+
+/*
+
+function verifEmail() {
+    
+    email = $("#email").val();
+
+    if(email.trim().length > 0) {
+        var reg = new RegExp('^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
+        return reg.test(email);
+    }
+}
+*/

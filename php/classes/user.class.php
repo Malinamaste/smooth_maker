@@ -32,7 +32,9 @@ class User {
     }
 
     public function getUserId(){
-    	return $_SESSION['user']['UserId'];
+        if($this->isAuthenticated()) {
+            return $_SESSION['user']['UserId'];
+        }
     }
 
     public function getFullName() {
