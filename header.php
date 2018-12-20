@@ -37,7 +37,7 @@ $user = $userSession->getFullName();
 	<body>
 		<!-- HEADER -->
 		<header id="header">
-			<section id="connexion">
+			<section id="connexion-user">
 				
 				<?php if(!empty($user)): ?>
 					<p id="nameUserConnect">Bonjour <?php echo $user ?> ! </p>
@@ -64,13 +64,13 @@ $user = $userSession->getFullName();
 			<nav id="main-nav">
 				<ul>
 					<li>
-						<a href="concept.php">Notre concept</a>
+						<a href="concept.php" class="active">Notre concept</a>
 					</li>
 					<li>
-						<a href="recipes.php">Nos recettes</a>
+						<a href="recipes.php" class="active">Nos recettes</a>
 					</li>
 					<li>
-						<a href="contact.php">Contact</a>
+						<a href="contact.php" class="active">Contact</a>
 					</li>
 				</ul>
 			</nav>

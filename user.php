@@ -67,7 +67,7 @@ include_once "php/models/userModel.class.php";
                     <label for="password"></label>
                     <input type="password" name="password" class="form-control" id="password" placeholder="Mot de passe">
                 </li>
-                <li>
+                <li class="last">
                     <button id="save" class="btn btn-primary">Enregistrer</button>
                     <a href="main.php" class="btn btn-primary">Annuler</a>
                 </li>

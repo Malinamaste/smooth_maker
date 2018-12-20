@@ -35,7 +35,7 @@ footer {
 	color:#f9a825;
 }
 
-.active {
+#main-nav .active:focus {
 	color:#f9a825;
 }
 
@@ -48,7 +48,7 @@ footer {
 #header img {
 	height: 10em;
 }
-#connexion {
+#connexion-user {
 	display: flex;
     flex-basis: 100%;
 	justify-content: flex-end;
@@ -56,7 +56,7 @@ footer {
 	margin-bottom: 1rem;
 	align-items: center;
 }
-#connexion a {
+#connexion-user a {
 	color: gray;
 	margin-right: 2rem;
 }
@@ -180,7 +180,7 @@ footer {
 		font-size: 3em;
 	}	
 /* RECIPES PAGE */
-#all-recipes, .about-us {
+#all-recipes, #about-us {
 	background-color: #fff;
 	padding: 5em 7em 0 7em;
 	display: flex;
@@ -323,49 +323,51 @@ footer {
 	padding: 5em 7em;
 }
 	/* FORMULAIRE */
-	#new-user .fa-file-alt {
+	#new-user .fa-file-alt, #user-co .fa-sign-in-alt {
 		padding-right: 0.7em;
 	}
-	#new-user form {
+	#new-user form, #user-co form {
 		margin-left: 3em;
 		width: 30em;
 	}
-	#new-user h1 {
+	#new-user h1, #user-co h1 {
 		color: #f9a825;
 		font-family: 'Pacifico', cursive;
 		font-size: 2em;
 	}
-	#new-user h2 {
+	#new-user h2, #user-co h2 {
 		color: #000;
 		text-transform: uppercase;
 		font-family: 'Josefin Sans', sans-serif;
 		padding-top: 1.5em;
 		padding-bottom: 1em;
 	}
-	#new-user input {
-		margin-bottom: 2em;
+	#new-user input, #user-co input {
+		margin-bottom: 1em;
 		padding: 1.5em;
 		font-size: 1em;
 	}
-	#new-user ::placeholder {font-size: 1em;}
-	#new-user ul li:nth-child(4) {
-		margin-top: 6em;
-		margin-bottom: 2em;
-	}
-	#new-user button, #new-user a {
+	#new-user ::placeholder, #user-co ::placeholder {font-size: 1em;}
+	#new-user ul li:nth-child(4) {margin-top: 4em;}
+	.last {margin-top: 2em;}
+	#new-user button, #new-user a, #user-co button, #user-co a {
 		border: none;
 		font-size: 1em;
 	}
-	#new-user button {
+	#new-user button, #user-co button {
 		background: #32c147;
 		margin-right: 1em;
 		padding: 0.5em;
 	}
-	#new-user a {
+	#new-user a, #user-co a {
 		background: rgb(226, 60, 71);
 		color: #fff;
 		padding: 0.5em 1em;
 	}
+/* CONNEXION */
+	/* FORMULAIRE */
+	#user-co ul li:nth-child(3) {margin-left: 1em;}
+	#user-co ul li:nth-child(3) label {padding-left: 0.5em;}
 /* FOOTER */
 #footer {
 	display: flex;
@@ -411,22 +413,17 @@ footer {
 	padding-right: 9rem;
 	margin-bottom: 2rem;
 }
-
 #contact .fa-envelope, #search .fa-search, #news .fa-newspaper {
 	color: #32c147;
 	padding: 0 5px;
 }
-
 #contact p, #search p, #news p {
 	padding: 0 10px 0 0;
 }
-
 /* CONCEPT */
-.about-us {
-	padding: 5em 4em 0 4em;
-}
-.about-us h1 {
+#about-us h1 {
 	color: #9E171F;
+	font-family: 'Pacifico', cursive;
     font-size: 1.8em;
     border-bottom: 2px solid #49b46a;
     padding-bottom: 0.7em;
@@ -434,44 +431,24 @@ footer {
 	margin: 0 auto;
 	margin-bottom: 1rem;
 }
-.about-us span {
+#about-us  {
 	color: #49b46a;
 	font-weight: bold;
 	font-size: 2rem;
 }
-#concept {
+#hawaii, #smoothie, #smoothie-pink {
+	background-size: cover;
 	display: flex;
-	flex-wrap: wrap;
-}
-#article {
-	flex:2;
-	margin:3rem;
-}
-#smoothie {
-	flex:1;
-	margin-top: 3rem;
-}
-#concept h2 {
-	padding-bottom: 1rem;
-}
-#flex p{
-	margin-left: 7rem;
-	line-height: 1.5em;
-}
-#article p {
-	margin-right: 7rem;
-	line-height: 1.5em;
+    padding-top: 20em;
 }
 #hawaii {
-	margin-top: 3rem;
+	background: url("../images/concept/hawaii-maui-mountain-999089.jpg") no-repeat center;
 }
-
-#flex {
-	display: flex;
-	margin: 6rem 15px;
+#smoothie {
+	background: url("../images/concept/beach-celebrate-cheers-1058433.jpg") no-repeat center;
 }
-#team {
-	margin-top: 2rem;
+#smoothie-pink {
+	background: url("../images/concept/cleanise-decoration-flora-1030909.jpg") no-repeat center;
 }
 /*
 	RESPONSIVE
