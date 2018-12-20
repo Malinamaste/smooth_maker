@@ -43,7 +43,7 @@
                     </li>
                 </ul>
             </form>
-            <img src="images/main/localisation/vieux-lyon2.png" alt="Un moment detox à la maison..." class="wrap">
+            <img src="images/contact/img_contact_mar.png" alt="Un moment detox à la maison...">
         </div>
         
     </article>
@@ -81,7 +81,7 @@
                     <li><a target="_blank" href="https://www.facebook.com/JusSmoothieetCie/?hc_ref=ARREvgNAXbyCXS_sdF3n3YCRjQEtKKJtaIWowbxPgpyjtrcjyfz-sTqvAHBZp2FY6SU&fref=nf&__xts__%5B0%5D=68.ARAyXQVfWoqEUwRgPa6KrvPKwMqp9tGoEQYOb_d3U077yQbyykufTzbUeYaN71ygI9rIHzeMahooB1umiwEbTsZIuaXFEXUtDxM7vI14uZufScRyvGGyIknyhcy6zDxXoT3oQSd3J_nHVCSnwsnOT1mVu8qzvb_8upzflJUBcZHAHd6TCvo8hTvIEA71e5nCk1TgnvCfaiaKi-nJ3XsSSTfcJOt9DmS2_IfNLFkTwrWv8PfbRBmeBvPTZYkMklqjzGNxIwPuDa1_yMRjswC_Cr2_ZbkSpsQS2t0pj-sRkWVUOgZreIyhsBXiX3Wf0JiTI3hkPaes39fmgMrN7F9WHms&__tn__=kC-R"><i class="fab fa-facebook-f"></i></a></li>
                 </ul>
             </div>
-            <img src="images/main/localisation/vieux-lyon2.png" alt="Des fruits à GOGO!">
+            <img src="images/contact/img_contact_mar_.png" alt="Des fruits à GOGO!">
         </div>
 
     </article>

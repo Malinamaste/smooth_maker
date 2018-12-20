@@ -8,6 +8,7 @@ h2, h3 {
 }
 footer {
 	color: #000;
+	border-top: #f9a825 4px solid;
 }
 .flex {display: flex;}
 /* HEADER */
@@ -15,8 +16,8 @@ footer {
 	display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-	padding: 2em;
-	border-bottom: #f9a825 4px solid;
+    padding: 2em 0;
+    border-bottom: #f9a825 4px solid;
 }
 #header a {
 	color: #32c147;
@@ -41,10 +42,10 @@ footer {
 #connexion-user {
 	display: flex;
     flex-basis: 100%;
-	justify-content: flex-end;
-	border-bottom: 2px solid gray;
-	margin-bottom: 1rem;
-	align-items: center;
+    justify-content: flex-end;
+    border-bottom: 1px solid gray;
+    margin-bottom: 2em;
+    align-items: center;
 }
 #connexion-user a {
 	color: gray;
@@ -385,6 +386,15 @@ footer {
     	padding: 2em 3em 1em;
     	font-size: 1.2em;
 	}
+	#contact-wai input {
+    	width: 32em;
+	}
+	#contact-wai img {
+		position: relative;
+		left: -20em;
+		width: 40em;
+		height: 45em;
+	}
 	#contact-wai .fa-envelope, #whereWeR .fa-compass {margin-right: 0.6em;}
 	#contact-wai, #whereWeR {
 		background-color: rgba(255,255,255, 0.9);
@@ -393,6 +403,11 @@ footer {
 	/* WHERE WE ARE */
 	#whereWeR {margin-top: 2em;}
 	#first, #second {flex: 1;}
+	#first img {
+		height: 36em;
+    	position: relative;
+    	left: -12em;
+	}
 	#second {
 		flex-direction: column;
     	justify-content: space-around;
@@ -412,7 +427,7 @@ footer {
 	#second .fa-map-marker-alt, .fa-phone-volume, .fa-paper-plane, .fa-calendar-alt {padding-right: 0.8em;}
 	#iframe {
 		display: flex;
-    	margin: 2em auto 0;
+    	margin: 2em auto;
 		justify-content: center;
 	}
 	iframe {
@@ -450,7 +465,6 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 3em 0;
-	border-top: #f9a825 4px solid;
 	justify-content: center;
     align-items: center;
 }
