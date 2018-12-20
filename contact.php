@@ -5,9 +5,18 @@
 
     include_once "php/models/contactModel.class.php";
 
+    if(array_key_exists("email", $_POST)) {
+        try
+            {
+                $contactModel = new ContactModel();
+                $contactModel->createContact();
 
-    $contactModel = new ContactModel();
-    $contactModel->createContact();
+            }
+            catch(DomainException $exception) {
+
+                $errorMessage = $exception->getMessage();
+            }
+    }
 
 ?>
 
@@ -17,31 +26,38 @@
         <h1><i class="fas fa-envelope"></i>Contactez-nous</h1>
 
         <p>Si vous souhaitez contacter l'équipe de Wai, nous faire des suggestions, ou nous demander quoi que ce soit, vous êtes au bon endroit ! Nous vous répondrons aussi vite que possible.</p>
-
+        
         <div class="flex">
             <form action="contact.php" method="POST" class="form-infos wrap">
                 <h2>Veuillez remplir le formulaire pour nous contacter...</h2>
 
+            <!-- Message d'alerte si l'adresse mail existe déjà -->   
+            <?php if(!empty($errorMessage)): ?>
+                <p class="alert alert-danger" role="alert" > 
+                    <?php echo $errorMessage; ?> 
+                </p>
+            <?php endif; ?>
+
                 <ul>
                     <li>
                         <label for="lastname"></label>
-                        <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Nom" value="">
+                        <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Nom" value="<?php if(array_key_exists("lastname", $_POST)) { echo $_POST["lastname"];  }?>">
                     </li>
                     <li>
                         <label for="firstname"></label>
-                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom" value="">
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom" value="<?php if(array_key_exists("firstname", $_POST)) { echo $_POST["firstname"];  }?>">
                     </li>
                     <li>
                         <label for="email"></label>
-                        <input type="email" name="email" class="form-control" id="email" placeholder="Email@" value="">
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Email@" value="<?php if(array_key_exists("email", $_POST)) { echo $_POST["email"];  }?>">
                     </li>
                     <li>
                         <label for="zip"></label>
-                        <input type="text" class="form-control" name="zip" id="zip" placeholder="Code postal" value="">
+                        <input type="text" class="form-control" name="zip" id="zip" placeholder="Code postal" value="<?php if(array_key_exists("zip", $_POST)) { echo $_POST["zip"];  }?>">
                     </li>
                     <li>
                         <label for="city"></label>
-                        <input type="text" name="city" class="form-control" id="city" placeholder="Ville">
+                        <input type="text" name="city" class="form-control" id="city" placeholder="Ville" value="<?php if(array_key_exists("city", $_POST)) { echo $_POST["city"];  }?>">
                     </li>
                     <li class="last">
                         <button id="save" class="btn btn-primary">Enregistrer</button>

@@ -70,7 +70,7 @@
 						<i class="far fa-star"></i>
 					<?php endfor; ?>
 				</p>
-				<a href="#">Clique moi<i class="fas fa-plus-circle"></i></a>
+				<a href="recipe.php?id=<?php echo $best["idRecipe"] ?>">Clique moi<i class="fas fa-plus-circle"></i></a>
 			</li>
 			<?php endforeach; ?>
 		</ul>
