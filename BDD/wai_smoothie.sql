@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mer 19 Décembre 2018 à 09:06
+-- Généré le :  Jeu 20 Décembre 2018 à 10:51
 -- Version du serveur :  5.7.24-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.32-0ubuntu0.16.04.1
 
@@ -61,7 +61,32 @@ CREATE TABLE `Comments` (
 --
 
 INSERT INTO `Comments` (`id`, `comment`, `idUser`, `idRecipe`, `rates`) VALUES
-(1, 'Super bonne recette', 1, 1, 2);
+(1, 'Super bonne recette', 1, 1, 2),
+(2, 'ghgh', 1, 1, 3),
+(3, 'super !!', 1, 1, 4),
+(4, 'super !!', 1, 1, 4),
+(5, 'super !!', 1, 1, 4),
+(6, 'super !!', 1, 1, 4),
+(7, 'super !!', 1, 1, 4),
+(8, 'super !!', 1, 1, 4),
+(9, 'super !!', 1, 1, 4),
+(10, 'super !!', 1, 1, 4),
+(11, 'super !!', 1, 1, 4),
+(12, 'super !!', 1, 1, 4),
+(13, 'super !!', 1, 1, 4),
+(14, 'super !!', 1, 1, 4),
+(15, 'super !!', 1, 1, 4),
+(16, 'super !!', 1, 1, 4),
+(17, 'super !!', 1, 1, 4),
+(18, 'bon', 1, 1, 2),
+(19, 'mmmm', 1, 1, 3),
+(20, 'fff', 1, 2, 3),
+(21, 'fff', 1, 2, 3),
+(22, 'fff', 1, 2, 3),
+(23, 'gg', 1, 4, 4),
+(24, 'Pas top !', 1, 7, 2),
+(25, 'A moi j\'ai adoré', 1, 7, 5),
+(26, '', 1, 7, 5);
 
 -- --------------------------------------------------------
 
@@ -73,6 +98,22 @@ CREATE TABLE `Favorite` (
   `idUser` int(11) NOT NULL,
   `idRecipe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `Favorite`
+--
+
+INSERT INTO `Favorite` (`idUser`, `idRecipe`) VALUES
+(1, 7),
+(1, 2),
+(1, 3),
+(1, 2),
+(1, 5),
+(1, 1),
+(1, 2),
+(1, 2),
+(1, 2),
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -128,22 +169,23 @@ CREATE TABLE `Recipe` (
   `description` text NOT NULL,
   `salePrice` float NOT NULL,
   `ingredientsNumber` int(11) NOT NULL,
-  `image` varchar(100) NOT NULL
+  `image` varchar(100) NOT NULL,
+  `imageBest` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `Recipe`
 --
 
-INSERT INTO `Recipe` (`id`, `name`, `description`, `salePrice`, `ingredientsNumber`, `image`) VALUES
-(1, 'Yello Wai', 'Délicieux mélange d\'ananas, de bananes et de citron vert pour ensoleiller vos papilles...', 5, 3, 'recette-d28983-smoothie-ananas-banane-et-citron-vert.jpg'),
-(2, 'Pink Wai', 'Un doux parfum d\'enfance 100% naturel : banane, fraises et pomme', 5.5, 3, 'recette-d23386-smoothie-banane-fraise-et-pomme.jpg'),
-(3, 'Detox Wai', 'Faites du bien à votre corps tout en vous régalant... fraises, framboises, kiwi, menthe et basilic se mélangent joyeusement.', 6.3, 5, 'recette-d17006-smoothie-detox-fraise-framboise-au-the.jpg'),
-(4, 'L\'Onctueux Wai', 'Les îles s\'invitent dans ce smoothie , banane, kiwi et fruit de la passion pour un voyage au soleil.', 6.5, 3, 'recette-d23000-smoothie-banane-kiwi-et-fruits-de-la-passion.jpg'),
-(5, 'Pina Wai', 'L\'exotisme est au rendez-vous dans ce smoothie composé de lait de coco, ananas et mangue.', 5.2, 3, 'recette-d23155-smoothie-mangue-facon-pina-colada (1).jpg'),
-(6, 'Fresh Wai', 'Très rafraîchissant mélange de pommes, citron vert et banane.', 4.8, 3, 'recette-d7800-smoothie-pomme-citron-vert-banane.jpg'),
-(7, 'Red Wai', 'Composé de mangue, d\'orange sanguine fraîche et de jus de carotte, ce Smoothie va glacer vos soirées d\'Halloween.', 5.2, 3, 'recette-d6770-smoothie-mangue-carotte-et-orange-sanguine.jpg'),
-(8, 'Green Wai', 'Boisson onctueuse mixée à base de concombre et de kiwi et parfumée à la menthe.', 4.8, 3, 'recette-d6491-smoothie-de-concombre-aux-kiwis.jpg');
+INSERT INTO `Recipe` (`id`, `name`, `description`, `salePrice`, `ingredientsNumber`, `image`, `imageBest`) VALUES
+(1, 'Yello Wai', 'Délicieux mélange d\'ananas, de bananes et de citron vert pour ensoleiller vos papilles...', 5, 3, 'recette-d28983-smoothie-ananas-banane-et-citron-vert.jpg', 'best1.png'),
+(2, 'Pink Wai', 'Un doux parfum d\'enfance 100% naturel : banane, fraises et pomme', 5.5, 3, 'recette-d23386-smoothie-banane-fraise-et-pomme.jpg', 'best2.png'),
+(3, 'Detox Wai', 'Faites du bien à votre corps tout en vous régalant... fraises, framboises, kiwi, menthe et basilic se mélangent joyeusement.', 6.3, 5, 'recette-d17006-smoothie-detox-fraise-framboise-au-the.jpg', 'best3.png'),
+(4, 'L\'Onctueux Wai', 'Les îles s\'invitent dans ce smoothie , banane, kiwi et fruit de la passion pour un voyage au soleil.', 6.5, 3, 'recette-d23000-smoothie-banane-kiwi-et-fruits-de-la-passion.jpg', 'best4.png'),
+(5, 'Pina Wai', 'L\'exotisme est au rendez-vous dans ce smoothie composé de lait de coco, ananas et mangue.', 5.2, 3, 'recette-d23155-smoothie-mangue-facon-pina-colada (1).jpg', 'best5.png'),
+(6, 'Fresh Wai', 'Très rafraîchissant mélange de pommes, citron vert et banane.', 4.8, 3, 'recette-d7800-smoothie-pomme-citron-vert-banane.jpg', 'best6.png'),
+(7, 'Red Wai', 'Composé de mangue, d\'orange sanguine fraîche et de jus de carotte, ce Smoothie va glacer vos soirées d\'Halloween.', 5.2, 3, 'recette-d6770-smoothie-mangue-carotte-et-orange-sanguine.jpg', 'best7.png'),
+(8, 'Green Wai', 'Boisson onctueuse mixée à base de concombre et de kiwi et parfumée à la menthe.', 4.8, 3, 'recette-d6491-smoothie-de-concombre-aux-kiwis.jpg', 'best8.pnn');
 
 -- --------------------------------------------------------
 
@@ -236,7 +278,9 @@ INSERT INTO `User` (`id`, `lastName`, `firstName`, `email`, `password`, `zip`) V
 (2, 'Coco', 'Loulou', 'coco@orange.frfff', '$2y$11$6b4f06a806d5249bbda22u4Sz.U0VirGL.5MH3jRpeBrRmqszliXy', '69600'),
 (3, 'Coco', 'Loulou', 'efefefef@ffff.fr', '$2y$11$b4d013615d7ebd0ed8d1euH0IS.QKqF8tJXwnJhTyowYnHYyR9gtG', '69600'),
 (4, 'Toto', 'bibi', 'root@ROOT.fr', '$2y$11$d623dac5cbca97a7b6494uIhiFxEqfyQXuDXkJUOg6GzAIFBYW/4u', '69600'),
-(5, 'Cocou', 'Loulou', 'coco@orange.frfffff', '$2y$11$63aca76c810741ae71b11uowZrYay4kwjwDLKeVJjbJ45eS.CgVTq', '69600');
+(5, 'Cocou', 'Loulou', 'coco@orange.frfffff', '$2y$11$63aca76c810741ae71b11uowZrYay4kwjwDLKeVJjbJ45eS.CgVTq', '69600'),
+(6, 'Vinai', 'Virginie', 'virginie@toto.fr', '$2y$11$fcb871edd0ac34207a5cfeN.Cp7bH.6gM8yqmcyz5aNhrxQH4EdnC', '69250'),
+(7, 'Toto', 'bibi', 'root@ROOT.frdd', '$2y$11$d9dd4bd296cd21743348duOQ162MO5/KRaOMSFSxOYDu74ngTjMs2', '69600');
 
 --
 -- Index pour les tables exportées
@@ -312,7 +356,7 @@ ALTER TABLE `Category`
 -- AUTO_INCREMENT pour la table `Comments`
 --
 ALTER TABLE `Comments`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT pour la table `Product`
 --
@@ -337,7 +381,7 @@ ALTER TABLE `Unit`
 -- AUTO_INCREMENT pour la table `User`
 --
 ALTER TABLE `User`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- Contraintes pour les tables exportées
 --
